@@ -1,0 +1,22 @@
+/* Header.css */
+.header {
+  position: relative;
+  overflow: hidden;       /* ensure children can’t spill out */
+}
+
+.header__bg {
+  display: block;         /* removes any inline‑image gaps */
+  width: 100%;
+  height: auto;
+}
+
+.header__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 1rem;        /* responsive padding */
+  color: white;           /* or whatever contrasting color */
+  max-width: 800px;
+}
