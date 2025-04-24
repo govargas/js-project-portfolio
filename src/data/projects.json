@@ -2,28 +2,28 @@
   {
     "id": 1,
     "title": "Kaffe Colombia Express",
-    "tags": ["HTML5","CSS3","JavaScript"],
-    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm...",
-    "demoUrl": "#",
-    "codeUrl": "#",
-    "image": "/projects/kaffe-colombia.png"
+    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. …",
+    "image": "/projects/kaffe-colombia.png",
+    "demoUrl": "https://your-demo-link.netlify.app",
+    "codeUrl": "https://github.com/yourusername/kaffe-project",
+    "tags": ["HTML5","CSS3","JavaScript"]
   },
   {
     "id": 2,
     "title": "Recipe Library",
-    "tags": ["HTML5","CSS3","JavaScript"],
-    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world...",
-    "demoUrl": "#",
-    "codeUrl": "#",
-    "image": "/projects/recipe-library.png"
+    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world.",
+    "image": "/projects/recipe-library.png",
+    "demoUrl": "https://your-recipe-demo.netlify.app",
+    "codeUrl": "https://github.com/yourusername/recipe-library",
+    "tags": ["HTML5","CSS3","JavaScript"]
   },
   {
     "id": 3,
     "title": "Weather App",
-    "tags": ["HTML5","CSS3","JavaScript","TypeScript"],
-    "description": "A small app that shows the current weather in any city, using real‑time data and dynamic styling...",
-    "demoUrl": "#",
-    "codeUrl": "#",
-    "image": "/projects/weather-app.png"
+    "description": "A small app that shows the current weather in any city, using real‐time data and dynamic styling.",
+    "image": "/projects/weather-app.png",
+    "demoUrl": "https://your-weather-demo.netlify.app",
+    "codeUrl": "https://github.com/yourusername/weather-app",
+    "tags": ["HTML5","CSS3","JavaScript","TypeScript"]
   }
 ]

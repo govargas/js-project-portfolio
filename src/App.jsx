@@ -1,21 +1,20 @@
-// src/App.jsx
 import React from 'react';
-import Header       from './components/Header';
-import Tech         from './components/Tech';
-import Articles     from './components/Articles';
-import Skills       from './components/Skills';
-import Projects     from './components/Projects';
-import Contact      from './components/Contact';
+import HeaderSection   from './sections/HeaderSection';
+import TechSection     from './sections/TechSection';
+import ArticlesSection from './sections/ArticlesSection';
+import SkillsSection   from './sections/SkillsSection';
+import ProjectsSection from './sections/ProjectsSection';
+import ContactSection  from './sections/ContactSection';
 
 export default function App() {
   return (
     <>
-      <Header />
-      <Tech />
-      <Articles />
-      <Skills />
-      <Projects />
-      <Contact />
+      <HeaderSection />
+      <TechSection />
+      <ArticlesSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
     </>
   );
 }
