@@ -1,6 +1,7 @@
 // src/styles/theme.js
 export const theme = {
   colors: {
+    white:      '#FFFFFF',
     text:       '#111111',
     background: '#FFFFFF',
     primary:    '#000000',

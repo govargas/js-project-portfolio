@@ -11,9 +11,9 @@ export default function App() {
     <>
       <HeaderSection />
       <TechSection />
-      <ArticlesSection />
-      <SkillsSection />
       <ProjectsSection />
+      <SkillsSection />
+      <ArticlesSection />
       <ContactSection />
     </>
   );

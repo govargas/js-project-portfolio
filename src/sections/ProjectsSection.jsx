@@ -1,16 +1,18 @@
+// src/sections/ProjectsSection.jsx
 import React from 'react';
 import styled from 'styled-components';
 import { Section }  from '../components/ui/SectionContainer';
 import { Headline } from '../components/ui/Headline';
 import { Button }   from '../components/ui/Button';
 import { Tag }      from '../components/ui/Tag';
-import { Photo }    from '../components/ui/Photo';
+import { Photo as BasePhoto } from '../components/ui/Photo';
 import { media }    from '../styles/media';
 import projects     from '../data/projects.json';
 
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xl};
+
   ${media.md} {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -25,11 +27,27 @@ const Card = styled.article`
 
   ${media.md} {
     flex-direction: row;
+    align-items: flex-start;
+  }
+`;
+
+const ProjectPhoto = styled(BasePhoto)`
+  width: 100%;
+
+  ${media.md} {
+    width: 45%;
+    flex-shrink: 0;
   }
 `;
 
 const Info = styled.div`
   padding: ${({ theme }) => theme.space.md};
+  flex: 1;
+
+  ${media.md} {
+    width: 55%;
+    padding-left: ${({ theme }) => theme.space.lg};
+  }
 `;
 
 export default function ProjectsSection() {
@@ -37,11 +55,13 @@ export default function ProjectsSection() {
     <Section id="featured-projects">
       <Headline>Featured Projects</Headline>
       <Grid>
-        {projects.map(p => (
+        {projects.map((p) => (
           <Card key={p.id}>
-            <Photo src={p.image} alt={`${p.title} screenshot`} />
+            <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
             <Info>
-              {p.tags.map(t => <Tag key={t}>{t}</Tag>)}
+              {p.tags.map((t) => (
+                <Tag key={t}>{t}</Tag>
+              ))}
               <h3>{p.title}</h3>
               <p>{p.description}</p>
               <Button href={p.demoUrl}>
