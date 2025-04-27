@@ -36,12 +36,19 @@ export const Button = styled.a`
     top: 8px;
     width: 32px;
     height: 32px;
+
+    /* slightly smaller GitHub */
+    &.github {
+      width: 28px;
+      height:28px;
+      top: 9px;
+    }
   }
 
   span {
     position: absolute;
     left: ${({ variant }) => (variant === 'solid' ? '63px' : '64px')};
-    top: 10px;
+    top: 13px;
     line-height: 1;
   }
 `;

@@ -92,11 +92,11 @@ export default function ProjectsSection() {
 
               <ButtonGroup>
                 <Button href={p.demoUrl} variant="solid">
-                  <img src="/globe.svg" alt="" />
+                  <img src="/globe.svg" alt="Globe icon" />
                   <span>Live demo</span>
                 </Button>
                 <Button href={p.codeUrl} variant="solid">
-                  <img src="/github.svg" alt="" />
+                  <img className="github" src="/github.svg" alt="Github icon" />
                   <span>View Code</span>
                 </Button>
               </ButtonGroup>
