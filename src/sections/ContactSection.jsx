@@ -1,42 +1,94 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Section } from '../components/ui/SectionContainer';
-import { Headline } from '../components/ui/Headline';
-import { Button } from '../components/ui/Button';
-import { Photo } from '../components/ui/Photo';
+import { Section }   from '../components/ui/SectionContainer';
+import { Headline }  from '../components/ui/Headline';
+import { Photo as BasePhoto } from '../components/ui/Photo';
+
+const ContactWrapper = styled(Section)`
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
+  text-align: center;
+  padding: ${({ theme }) => `${theme.space.xl} 0`};
+`;
+
+// force the Headline to be white here
+const WhiteHeadline = styled(Headline)`
+  color: ${({ theme }) => theme.colors.white};
+  margin-bottom: ${({ theme }) => theme.space.lg};
+`;
+
+const ProfileWrapper = styled.div`
+  width: 164px;
+  height: 164px;
+  margin: 0 auto ${({ theme }) => theme.space.lg};
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
+const Photo = styled(BasePhoto)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 const Info = styled.div`
-  text-align: center;
-  margin-top: ${({ theme }) => theme.space.md};
   line-height: 1.4;
+
+  p {
+    margin-bottom: ${({ theme }) => theme.space.sm};
+  }
+`;
+
+// icon links: pass `invert` to invert only LinkedIn
+const IconLink = styled.a`
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    filter: ${({ invert }) => (invert ? 'invert(1)' : 'none')};
+  }
 `;
 
 const Icons = styled.div`
-  display: inline-flex;
-  gap: ${({ theme }) => theme.space.md};
-  margin-top: ${({ theme }) => theme.space.sm};
+  display: flex;
+  justify-content: center;
+  gap: ${({ theme }) => theme.space.lg};
+  margin-top: ${({ theme }) => theme.space.md};
 `;
 
 export default function ContactSection() {
   return (
-    <Section id="contact">
-      <Headline>Let’s Talk</Headline>
-      <Photo src="/talo_profile.jpg" alt="Talo Vargas" />
+    <ContactWrapper id="contact">
+      <WhiteHeadline>Let’s Talk</WhiteHeadline>
+
+      <ProfileWrapper>
+        <Photo src="/talo_profile.webp" alt="Talo Vargas" />
+      </ProfileWrapper>
+
       <Info>
         <p>Talo Vargas</p>
         <p>+46 (0)725 79 46 77</p>
-        <p><a href="mailto:talovargasd@gmail.com">talovargasd@gmail.com</a></p>
+        <p>
+          <a href="mailto:talovargasd@gmail.com">
+            talovargasd@gmail.com
+          </a>
+        </p>
       </Info>
+
       <Icons>
-        <Button href="https://linkedin.com/in/…">
-          <img src="/linkedin.svg" alt="LinkedIn" />
-          LinkedIn
-        </Button>
-        <Button href="https://github.com/…">
-          <img src="/github.svg" alt="GitHub" />
-          GitHub
-        </Button>
+        {/* invert only the LinkedIn SVG */}
+        <IconLink href="https://linkedin.com/in/…" invert aria-label="LinkedIn">
+          <img src="/linkedin.svg" alt="" />
+        </IconLink>
+
+        {/* GitHub SVG stays as-is */}
+        <IconLink href="https://github.com/…" aria-label="GitHub">
+          <img src="/github.svg" alt="" />
+        </IconLink>
       </Icons>
-    </Section>
+    </ContactWrapper>
   );
 }

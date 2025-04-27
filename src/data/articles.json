@@ -3,7 +3,7 @@
     "id": 1,
     "date": "April 14th",
     "title": "This Is How I Got Here",
-    "excerpt": "I moved to Sweden at 24 to start over. I had no job, no network, and didn’t speak the language…",
+    "excerpt": "I moved to Sweden at 24 to start over. I had no job, no network, and didn't speak the language. A decade later, I’ve built a life, a family, and a new career — one line of code at a time. Here’s how I got there...",
     "url": "https://yourblog.com/this-is-how-i-got-here",
     "image": "/articles/how-i-got-here.jpg"
   },
@@ -13,6 +13,6 @@
     "title": "How to stop being scared: Learning to love code",
     "excerpt": "The chat bot app is a conversational AI-powered tool designed to enhance user experience…",
     "url": "https://yourblog.com/learning-to-love-code",
-    "image": "/articles/learning-to-love-code.jpg"
+    "image": "/articles/learning-to-love-code.png"
   }
 ]
