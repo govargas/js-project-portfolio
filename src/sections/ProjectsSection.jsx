@@ -11,19 +11,18 @@ import projects     from '../data/projects.json';
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xl};
-  /* always one column so each card spans full width minus Section gutters */
   grid-template-columns: 1fr;
 `;
 
 const Card = styled.article`
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* default for mobile + tablet */
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 8px;
   overflow: hidden;
 
-  /* tablet+ : alternate row/row-reverse per index */
-  ${media.md} {
+  /* desktop+: horizontal split with alternating order */
+  ${media.lg} {
     flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
     margin-bottom: ${({ theme }) => theme.space.xxl};
@@ -33,7 +32,8 @@ const Card = styled.article`
 const ProjectPhoto = styled(BasePhoto)`
   width: 100%;
 
-  ${media.md} {
+  /* desktop+: photo is 45% of card */
+  ${media.lg} {
     width: 45%;
     flex-shrink: 0;
   }
@@ -43,7 +43,15 @@ const Info = styled.div`
   padding: ${({ theme }) => theme.space.md};
   flex: 1;
 
+  /* tablet: center it, 80% wide, left-aligned text */
   ${media.md} {
+    width: 80%;
+    /* margin: 0 auto; */
+    text-align: left;
+  }
+
+  /* desktop+: 55% wide, side padding */
+  ${media.lg} {
     width: 55%;
     padding-left: ${({ theme }) => theme.space.lg};
     padding-right: ${({ theme }) => theme.space.lg};
@@ -53,7 +61,7 @@ const Info = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};  /* 8px between buttons */
+  gap: ${({ theme }) => theme.space.sm};
   margin-top: ${({ theme }) => theme.space.md};
 `;
 
