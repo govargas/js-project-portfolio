@@ -7,45 +7,57 @@ import { media }     from '../styles/media';
 
 const SkillsWrapper = styled(Section)`
   background: ${({ theme }) => theme.colors.primary};   /* black */
-  color: ${({ theme }) => theme.colors.white};         
+  color: ${({ theme }) => theme.colors.white};         /* white text */
 `;
 
-// Grid: 1 column on phone, 5 columns on desktop
+// override the Headline to always be white here
+const WhiteHeadline = styled(Headline)`
+  color: ${({ theme }) => theme.colors.white};  
+  margin-bottom: ${({ theme }) => theme.space.xl};
+`;
+
+// Grid: single column on mobile/tablet, five columns on desktop
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.lg};
   grid-template-columns: 1fr;
 
-  /* tablet+ still single col but centered items */
   ${media.md} {
+    /* tablet still stacks, but center items */
     grid-template-columns: 1fr;
     justify-items: center;
   }
 
-  /* desktop+ five equal columns */
   ${media.lg} {
+    /* desktop: five columns */
     grid-template-columns: repeat(5, minmax(0, 1fr));
     justify-items: start;
   }
 `;
 
-// Each column
+// each column container
 const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space.sm};
-  text-align: ${({ theme }) => theme.breakpoints.lg ? 'left' : 'center'};
+  text-align: ${({ theme }) => (window.innerWidth >= 1024 ? 'left' : 'center')};
 `;
 
-// Override Tag so it’s white bg / black text / black border
+// use Tag primitive, but make it fixed-width (180px) and centered on mobile/tablet
 const ColumnTag = styled(Tag)`
-  display: inline-block;
-  flex: none;                         /* don’t stretch */
-  border-color: white;
+  flex: none;                                 /* don’t stretch */
+  width: 180px;                               /* fixed width */
+  margin: 0 auto;                             /* center on mobile/tablet */
+  background: ${({ theme }) => theme.colors.primary}; /* white */
+  color: ${({ theme }) => theme.colors.background}; /* black */
+  border-color: ${({ theme }) => theme.colors.background}; 
   font-weight: 600;
+
+  ${media.lg} {
+    margin: 0;      /* reset to left-align on desktop */
+  }
 `;
 
-// Individual skill item
 const Item = styled.span`
   font-size: ${({ theme }) => theme.fontSizes.body};
   line-height: 1.4;
@@ -54,10 +66,9 @@ const Item = styled.span`
 export default function SkillsSection() {
   return (
     <SkillsWrapper id="skills">
-      <Headline>Skills</Headline>
+      <WhiteHeadline>Skills</WhiteHeadline>
 
       <Grid>
-        {/* Code */}
         <Column>
           <ColumnTag>Code</ColumnTag>
           <Item>HTML5</Item>
@@ -67,7 +78,6 @@ export default function SkillsSection() {
           <Item>GitHub</Item>
         </Column>
 
-        {/* Toolbox */}
         <Column>
           <ColumnTag>Toolbox</ColumnTag>
           <Item>Atom</Item>
@@ -85,7 +95,6 @@ export default function SkillsSection() {
           <Item>Bitwig</Item>
         </Column>
 
-        {/* Upcoming */}
         <Column>
           <ColumnTag>Upcoming</ColumnTag>
           <Item>MongoDB</Item>
@@ -94,7 +103,6 @@ export default function SkillsSection() {
           <Item>Supabase</Item>
         </Column>
 
-        {/* More */}
         <Column>
           <ColumnTag>More</ColumnTag>
           <Item>Branding</Item>
@@ -104,7 +112,6 @@ export default function SkillsSection() {
           <Item>Agile methodology</Item>
         </Column>
 
-        {/* Languages */}
         <Column>
           <ColumnTag>Languages</ColumnTag>
           <Item>Spanish</Item>
