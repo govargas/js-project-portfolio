@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Recipe Library",
-    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world. Built with future plans to host personal family recipes in multiple languages.",
+    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world.",
     "image": "/projects/recipe-library.png",
     "demoUrl": "https://your-recipe-demo.netlify.app",
     "codeUrl": "https://github.com/yourusername/recipe-library",

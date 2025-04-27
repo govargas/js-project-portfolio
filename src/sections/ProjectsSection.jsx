@@ -44,7 +44,6 @@ const Info = styled.div`
   /* tablet: photo above, info below at 80% width */
   ${media.md} {
     width: 80%;
-    margin: 0 auto;
     text-align: left;
   }
 
