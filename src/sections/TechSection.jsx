@@ -1,10 +1,8 @@
-// src/sections/TechSection.jsx
 import React from 'react';
 import styled from 'styled-components';
 import { Headline } from '../components/ui/Headline';
 import { media }   from '../styles/media';
 
-// 1) Full-bleed black wrapper
 const TechWrapper = styled.section`
   width: 100%;
   background: ${({ theme }) => theme.colors.primary};   /* pure black */
@@ -16,57 +14,40 @@ const TechWrapper = styled.section`
   }
 `;
 
-// 2) Centered container for pills & headline
 const Content = styled.div`
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
 `;
 
-// // 3) White, centered headline
-// const CenteredHeadline = styled(Headline)`
-//   color: ${({ theme }) => theme.colors.background}; /* white */
-//   margin-bottom: ${({ theme }) => theme.space.lg};
-// `;
-
-// 4) Pills list
-const List = styled.ul`
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: ${({ theme }) => theme.space.md};
-  justify-content: center;
+// force headline white
+const CenteredHeadline = styled(Headline)`
+  color: ${({ theme }) => theme.colors.background};
+  margin-bottom: ${({ theme }) => theme.space.lg};
 `;
 
-// 5) Each pill
-const Item = styled.li`
-  background: ${({ theme }) => theme.colors.primary};  /* black */
-  color: ${({ theme }) => theme.colors.background};   /* white */
-  border: 1px solid ${({ theme }) => theme.colors.background};
-  border-radius: 4px;
-  padding: ${({ theme }) => `${theme.space.sm} ${theme.space.md}`};
+// one line of comma-separated skills
+const List = styled.p`
+  color: ${({ theme }) => theme.colors.background};
   font-size: ${({ theme }) => theme.fontSizes.body};
-
-  &:hover {
-    opacity: 0.8;
-  }
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 `;
 
 export default function TechSection() {
+  const skills = [
+    'HTML','CSS','Flexbox','JavaScript','ES6','JSX',
+    'React','React Hooks','Node.js','Mongo DB',
+    'Accessibility','APIs','Mob-programming',
+    'Pair-programming','GitHub'
+  ];
+
   return (
     <TechWrapper id="tech">
       <Content>
-        <Headline inverse>Tech</Headline>
-        <List>
-          {[
-            'HTML','CSS','Flexbox','JavaScript','ES6','JSX',
-            'React','React Hooks','Node.js','Mongo DB',
-            'Accessibility','APIs','Mob-programming',
-            'Pair-programming','GitHub'
-          ].map(skill => (
-            <Item key={skill}>{skill}</Item>
-          ))}
-        </List>
+        <CenteredHeadline>Tech</CenteredHeadline>
+        <List>{skills.join(', ')}</List>
       </Content>
     </TechWrapper>
   );
