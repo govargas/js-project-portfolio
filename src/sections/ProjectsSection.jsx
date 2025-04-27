@@ -17,19 +17,20 @@ const Grid = styled.div`
 const Card = styled.article`
   display: flex;
   flex-direction: column;
-  border: 1px solid ${({ theme }) => theme.colors.secondary};
-  border-radius: 8px;
+  gap: ${({ theme }) => theme.space.sm}; 
   overflow: hidden;
 
   ${media.lg} {
     flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
     margin-bottom: ${({ theme }) => theme.space.xxl};
+    gap: ${({ theme }) => theme.space.xl}; 
   }
 `;
 
 const ProjectPhoto = styled(BasePhoto)`
   width: 100%;
+  display: block;
 
   ${media.lg} {
     width: 45%;
@@ -38,28 +39,29 @@ const ProjectPhoto = styled(BasePhoto)`
 `;
 
 const Info = styled.div`
-  padding: ${({ theme }) => theme.space.md};
+  width: 100%;
   flex: 1;
+  /* ── mobile: no horizontal padding here, rely on Section’s 16px gutter ── */
+  padding: ${({ theme }) => theme.space.md} 0;  
 
-  /* tablet: photo above, info below at 80% width */
   ${media.md} {
+    /* ── tablet: narrower block under photo ── */
     width: 80%;
+    padding: ${({ theme }) => theme.space.md} 0;
     text-align: left;
   }
 
-  /* desktop: side-by-side layout */
   ${media.lg} {
+    /* ── desktop: side-by-side, with a 32px gutter inside info ── */
     width: 55%;
-    padding-left: ${({ theme }) => theme.space.lg};
-    padding-right: ${({ theme }) => theme.space.lg};
+    padding: 0 ${({ theme }) => theme.space.lg};
   }
 `;
 
-/* Full‐width tag row */
 const TagList = styled.div`
   display: flex;
   width: 100%;
-  gap: ${({ theme }) => theme.space.sm};   /* 8px between pills */
+  gap: ${({ theme }) => theme.space.sm};
   margin-bottom: ${({ theme }) => theme.space.sm};
 `;
 
@@ -68,11 +70,6 @@ const ButtonGroup = styled.div`
   flex-direction: column;
   gap: ${({ theme }) => theme.space.sm};
   margin-top: ${({ theme }) => theme.space.md};
-`;
-
-const FooterAction = styled.div`
-  margin-top: ${({ theme }) => theme.space.xl};
-  text-align: center;
 `;
 
 export default function ProjectsSection() {
@@ -86,11 +83,8 @@ export default function ProjectsSection() {
             <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
 
             <Info>
-              {/* wrap tags in our full‐width flex container */}
               <TagList>
-                {p.tags.map((t) => (
-                  <Tag key={t}>{t}</Tag>
-                ))}
+                {p.tags.map(t => <Tag key={t}>{t}</Tag>)}
               </TagList>
 
               <h3>{p.title}</h3>
@@ -110,13 +104,6 @@ export default function ProjectsSection() {
           </Card>
         ))}
       </Grid>
-
-      {/* <FooterAction>
-        <Button href="#all-projects" variant="outline">
-          <img src="/arrow_down.svg" alt="" />
-          <span>See more projects</span>
-        </Button>
-      </FooterAction> */}
     </Section>
   );
 }

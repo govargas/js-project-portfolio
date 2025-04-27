@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
   overflow: hidden;
 
   /* Mobile: center cover */
-  background: url('/talo_header.webp') no-repeat 50% 50% / cover;
+  background: url('/talo_header.webp') no-repeat center top / cover;
 
   /* Tablet (≥768px): slight pan & zoom */
   ${media.md} {
@@ -29,8 +29,8 @@ const Overlay = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90vw;
-  max-width: 320px;
+  width: 90%;
+  max-width: 800px;
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
 

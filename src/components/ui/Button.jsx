@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const base = css`
   position: relative;
   display: block;
-  width: 303px;
+  width: 287px;
   height: 48px;
   padding: 0;
   text-decoration: none;

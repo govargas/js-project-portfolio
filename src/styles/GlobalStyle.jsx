@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.5;
+    overflow-x: hidden;
   }
 
   /* 3. Ensure all elements inherit the font */
