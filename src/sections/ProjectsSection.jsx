@@ -11,10 +11,8 @@ import projects     from '../data/projects.json';
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xl};
-
-  ${media.md} {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* always one column so each card spans full width minus Section gutters */
+  grid-template-columns: 1fr;
 `;
 
 const Card = styled.article`
@@ -24,9 +22,11 @@ const Card = styled.article`
   border-radius: 8px;
   overflow: hidden;
 
+  /* tablet+ : alternate row/row-reverse per index */
   ${media.md} {
-    flex-direction: row;
+    flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
+    margin-bottom: ${({ theme }) => theme.space.xxl};
   }
 `;
 
@@ -46,18 +46,17 @@ const Info = styled.div`
   ${media.md} {
     width: 55%;
     padding-left: ${({ theme }) => theme.space.lg};
+    padding-right: ${({ theme }) => theme.space.lg};
   }
 `;
 
-// 8px vertical gap between the two buttons
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};
+  gap: ${({ theme }) => theme.space.sm};  /* 8px between buttons */
   margin-top: ${({ theme }) => theme.space.md};
 `;
 
-// Center the "See more projects" button
 const FooterAction = styled.div`
   margin-top: ${({ theme }) => theme.space.xl};
   text-align: center;
@@ -67,9 +66,10 @@ export default function ProjectsSection() {
   return (
     <Section id="featured-projects">
       <Headline>Featured Projects</Headline>
+
       <Grid>
-        {projects.map((p) => (
-          <Card key={p.id}>
+        {projects.map((p, i) => (
+          <Card key={p.id} reverse={i % 2 === 1}>
             <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
             <Info>
               {p.tags.map((t) => (

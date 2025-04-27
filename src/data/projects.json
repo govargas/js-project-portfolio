@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Kaffe Colombia Express",
-    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. …",
+    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
     "image": "/projects/kaffe-colombia.png",
     "demoUrl": "https://your-demo-link.netlify.app",
     "codeUrl": "https://github.com/yourusername/kaffe-project",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Recipe Library",
-    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world.",
+    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world. Built with future plans to host personal family recipes in multiple languages.",
     "image": "/projects/recipe-library.png",
     "demoUrl": "https://your-recipe-demo.netlify.app",
     "codeUrl": "https://github.com/yourusername/recipe-library",
