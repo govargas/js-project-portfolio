@@ -111,12 +111,12 @@ export default function ProjectsSection() {
         ))}
       </Grid>
 
-      <FooterAction>
+      {/* <FooterAction>
         <Button href="#all-projects" variant="outline">
-          <img src="/arrow.svg" alt="" />
+          <img src="/arrow_down.svg" alt="" />
           <span>See more projects</span>
         </Button>
-      </FooterAction>
+      </FooterAction> */}
     </Section>
   );
 }
