@@ -21,18 +21,44 @@ export const GlobalStyle = createGlobalStyle`
     font-family: inherit;
   }
 
-  /* 4. Images */
+  /* 4. Images are responsive */
   img {
     display: block;
     max-width: 100%;
     height: auto;
   }
 
-  /* 5. Icon sizing inside buttons */
-  .button img {
-    width: 1em;           /* matches the button’s font-size */
+  /* 5. Remove default link styling everywhere */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* 6. Remove focus outlines (add your own focus styles later) */
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  /* 7. Reset buttons & form elements */
+  button,
+  input,
+  textarea {
+    font-family: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 8. Generic inline-icon sizing for img inside links or buttons */
+  a img,
+  button img {
+    width: 1em;
     height: 1em;
-    margin-right: 0.5em;  /* space between icon and text */
-    vertical-align: text-bottom;
+    vertical-align: middle;
+    display: inline-block;
   }
 `;

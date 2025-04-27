@@ -1,4 +1,3 @@
-// src/sections/ProjectsSection.jsx
 import React from 'react';
 import styled from 'styled-components';
 import { Section }  from '../components/ui/SectionContainer';
@@ -50,6 +49,20 @@ const Info = styled.div`
   }
 `;
 
+// 8px vertical gap between the two buttons
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.space.sm};
+  margin-top: ${({ theme }) => theme.space.md};
+`;
+
+// Center the "See more projects" button
+const FooterAction = styled.div`
+  margin-top: ${({ theme }) => theme.space.xl};
+  text-align: center;
+`;
+
 export default function ProjectsSection() {
   return (
     <Section id="featured-projects">
@@ -64,22 +77,28 @@ export default function ProjectsSection() {
               ))}
               <h3>{p.title}</h3>
               <p>{p.description}</p>
-              <Button href={p.demoUrl}>
-                <img src="/globe.svg" alt="" />
-                Live demo
-              </Button>
-              <Button variant="outline" href={p.codeUrl}>
-                <img src="/github.svg" alt="" />
-                View Code
-              </Button>
+
+              <ButtonGroup>
+                <Button href={p.demoUrl} variant="solid">
+                  <img src="/globe.svg" alt="" />
+                  <span>Live demo</span>
+                </Button>
+                <Button href={p.codeUrl} variant="solid">
+                  <img src="/github.svg" alt="" />
+                  <span>View Code</span>
+                </Button>
+              </ButtonGroup>
             </Info>
           </Card>
         ))}
       </Grid>
-      <Button variant="outline" href="#all-projects">
-        <img src="/arrow.svg" alt="" />
-        See more projects
-      </Button>
+
+      <FooterAction>
+        <Button href="#all-projects" variant="outline">
+          <img src="/arrow.svg" alt="" />
+          <span>See more projects</span>
+        </Button>
+      </FooterAction>
     </Section>
   );
 }
