@@ -11,17 +11,16 @@ import projects     from '../data/projects.json';
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xl};
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* one card per row */
 `;
 
 const Card = styled.article`
   display: flex;
-  flex-direction: column;  /* default for mobile + tablet */
+  flex-direction: column;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 8px;
   overflow: hidden;
 
-  /* desktop+: horizontal split with alternating order */
   ${media.lg} {
     flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
@@ -32,7 +31,6 @@ const Card = styled.article`
 const ProjectPhoto = styled(BasePhoto)`
   width: 100%;
 
-  /* desktop+: photo is 45% of card */
   ${media.lg} {
     width: 45%;
     flex-shrink: 0;
@@ -43,19 +41,27 @@ const Info = styled.div`
   padding: ${({ theme }) => theme.space.md};
   flex: 1;
 
-  /* tablet: center it, 80% wide, left-aligned text */
+  /* tablet: photo above, info below at 80% width */
   ${media.md} {
     width: 80%;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     text-align: left;
   }
 
-  /* desktop+: 55% wide, side padding */
+  /* desktop: side-by-side layout */
   ${media.lg} {
     width: 55%;
     padding-left: ${({ theme }) => theme.space.lg};
     padding-right: ${({ theme }) => theme.space.lg};
   }
+`;
+
+/* Full‐width tag row */
+const TagList = styled.div`
+  display: flex;
+  width: 100%;
+  gap: ${({ theme }) => theme.space.sm};   /* 8px between pills */
+  margin-bottom: ${({ theme }) => theme.space.sm};
 `;
 
 const ButtonGroup = styled.div`
@@ -79,10 +85,15 @@ export default function ProjectsSection() {
         {projects.map((p, i) => (
           <Card key={p.id} reverse={i % 2 === 1}>
             <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
+
             <Info>
-              {p.tags.map((t) => (
-                <Tag key={t}>{t}</Tag>
-              ))}
+              {/* wrap tags in our full‐width flex container */}
+              <TagList>
+                {p.tags.map((t) => (
+                  <Tag key={t}>{t}</Tag>
+                ))}
+              </TagList>
+
               <h3>{p.title}</h3>
               <p>{p.description}</p>
 
