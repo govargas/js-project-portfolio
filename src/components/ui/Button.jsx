@@ -26,7 +26,9 @@ const variants = {
   `
 };
 
-export const Button = styled.a`
+  export const Button = styled.a.withConfig({
+    shouldForwardProp: prop => prop !== 'variant'
+  })`
   ${base}
   ${({ variant = 'solid' }) => variants[variant]};
 

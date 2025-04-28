@@ -41,7 +41,9 @@ const Info = styled.div`
 `;
 
 // icon links: pass `invert` to invert only LinkedIn
-const IconLink = styled.a`
+  const IconLink = styled.a.withConfig({
+    shouldForwardProp: prop => prop !== 'invert'
+  })`
   display: inline-block;
   width: 32px;
   height: 32px;
@@ -81,7 +83,7 @@ export default function ContactSection() {
 
       <FadeInSection><Icons>
         {/* invert only the LinkedIn SVG */}
-        <IconLink href="https://www.linkedin.com/in/talovargas/" invert aria-label="LinkedIn">
+        <IconLink href="https://www.linkedin.com/in/talovargas/" invert aria-label="LinkedIn profile">
           <img src="/linkedin.svg" alt="" />
         </IconLink>
 

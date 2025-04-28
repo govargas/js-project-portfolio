@@ -8,7 +8,7 @@ This is my personal coding portfolio, built as a React application with Vite and
 
 ## 🎨 Design Prototype
 
-The original Figma design can be found here:
+Based on this Figma design:
 
 👉 [Figma — Talo Portfolio](https://www.figma.com/design/rOH4n5sYyPjvWKIYzKSAMV/Talo-Portfolio?node-id=1078-906&t=AmI7v9okcXEdUF6i-1)
 
@@ -25,8 +25,9 @@ The original Figma design can be found here:
 
 - **Responsive Design** from mobile (320px) to desktop (≥1600px)
 - **Styled Components** for scoped, theme-driven styling
+- **Follows original Figma Design** for coherence
 - **Scroll Animations**: content fades in as you scroll
-- **Accessibility** optimizations (alt text, semantic markup, keyboard focus)
+- **Accessibility** optimizations (alt text, semantic markup, keyboard focus, skip to main)
 
 ## 📧 Contact
 

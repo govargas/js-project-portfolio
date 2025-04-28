@@ -81,6 +81,7 @@ export default function SkillsSection() {
         </Column>
       </FadeInSection>
 
+      <FadeInSection>
         <Column>
           <ColumnTag>Toolbox</ColumnTag>
           <Item>Atom</Item>
@@ -97,7 +98,9 @@ export default function SkillsSection() {
           <Item>Logic Pro X</Item>
           <Item>Bitwig</Item>
         </Column>
+      </FadeInSection>
 
+      <FadeInSection>
         <Column>
           <ColumnTag>Upcoming</ColumnTag>
           <Item>MongoDB</Item>
@@ -105,7 +108,9 @@ export default function SkillsSection() {
           <Item>React</Item>
           <Item>Supabase</Item>
         </Column>
+      </FadeInSection>
 
+      <FadeInSection>
         <Column>
           <ColumnTag>More</ColumnTag>
           <Item>Branding</Item>
@@ -114,7 +119,9 @@ export default function SkillsSection() {
           <Item>Concept Development</Item>
           <Item>Agile methodology</Item>
         </Column>
+      </FadeInSection>  
 
+      <FadeInSection>
         <Column>
           <ColumnTag>Languages</ColumnTag>
           <Item>Spanish</Item>
@@ -122,6 +129,7 @@ export default function SkillsSection() {
           <Item>English</Item>
           <Item>German</Item>
         </Column>
+      </FadeInSection>    
       </Grid>
     </SkillsWrapper>
   );

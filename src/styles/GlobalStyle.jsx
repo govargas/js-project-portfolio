@@ -1,3 +1,4 @@
+// src/styles/GlobalStyle.jsx
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
@@ -6,6 +7,21 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+
+  /* SKIP LINK: visually hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.primary};
+    padding: ${({ theme }) => theme.space.sm};
+    z-index: 100;
+    transition: top 0.3s ease;
+  }
+  .skip-link:focus {
+    top: 0;
   }
 
   /* 2. Base typography & colors */
@@ -35,12 +51,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  /* 6. Remove focus outlines (add your own focus styles later) */
-  a:focus,
-  button:focus,
-  input:focus,
-  textarea:focus {
-    outline: none;
+  /* 6. Custom focus outlines for accessibility */
+  :focus {
+    outline: 3px solid ${({ theme }) => theme.colors.accent};
+    outline-offset: 2px;
   }
 
   /* 7. Reset buttons & form elements */

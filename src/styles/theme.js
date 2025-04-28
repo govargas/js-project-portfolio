@@ -1,4 +1,3 @@
-// src/styles/theme.js
 export const theme = {
   colors: {
     white:      '#FFFFFF',

@@ -16,7 +16,9 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
 `;
 
-const Card = styled.article`
+const Card = styled.article.withConfig({
+  shouldForwardProp: prop => prop !== 'reverse'
+})`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space.sm};
@@ -41,7 +43,9 @@ const ProjectPhoto = styled(BasePhoto)`
 `;
 
 // dynamic tag rows: stretch only if exactly 3 in that row
-const TagRow = styled.div`
+  const TagRow = styled.div.withConfig({
+    shouldForwardProp: prop => prop !== 'equal'
+  })`
   display: flex;
   gap: ${({ theme }) => theme.space.sm};
   ${({ equal }) =>
