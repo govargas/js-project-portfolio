@@ -4,8 +4,8 @@
     "title": "Kaffe Colombia Express",
     "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
     "image": "/projects/kaffe-colombia.png",
-    "demoUrl": "https://your-demo-link.netlify.app",
-    "codeUrl": "https://github.com/yourusername/kaffe-project",
+    "demoUrl": "https://kaffekolombia.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-business-site",
     "tags": ["HTML5","CSS3","JavaScript"]
   },
   {
@@ -13,17 +13,17 @@
     "title": "Recipe Library",
     "description": "A recipe search app that fetches data from an external API and displays dishes from around the world.",
     "image": "/projects/recipe-library.png",
-    "demoUrl": "https://your-recipe-demo.netlify.app",
-    "codeUrl": "https://github.com/yourusername/recipe-library",
-    "tags": ["HTML5","CSS3","JavaScript"]
+    "demoUrl": "https://talorecipes.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-recipe-library",
+    "tags": ["HTML5","CSS3","JavaScript","API"]
   },
   {
     "id": 3,
     "title": "Weather App",
     "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast.",
     "image": "/projects/weather-app.png",
-    "demoUrl": "https://your-weather-demo.netlify.app",
-    "codeUrl": "https://github.com/yourusername/weather-app",
+    "demoUrl": "https://wind1weatherapp.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-weather-app",
     "tags": ["HTML5","CSS3","JavaScript","TypeScript"]
   },
   {
@@ -31,8 +31,8 @@
     "title": "Web Accessibility Quiz",
     "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity.",
     "image": "/projects/web-accessibility.png",
-    "demoUrl": "https://your-weather-demo.netlify.app",
-    "codeUrl": "https://github.com/yourusername/weather-app",
+    "demoUrl": "https://teamwind1.netlify.app/",
+    "codeUrl": "https://github.com/Bianka2112/js-project-accessibility",
     "tags": ["HTML5","CSS3","JavaScript"]
   }
 ]

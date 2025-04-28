@@ -80,12 +80,12 @@ export default function ContactSection() {
 
       <Icons>
         {/* invert only the LinkedIn SVG */}
-        <IconLink href="https://linkedin.com/in/…" invert aria-label="LinkedIn">
+        <IconLink href="https://www.linkedin.com/in/talovargas/" invert aria-label="LinkedIn">
           <img src="/linkedin.svg" alt="" />
         </IconLink>
 
         {/* GitHub SVG stays as-is */}
-        <IconLink href="https://github.com/…" aria-label="GitHub">
+        <IconLink href="https://github.com/govargas/" aria-label="GitHub">
           <img src="/github.svg" alt="" />
         </IconLink>
       </Icons>
