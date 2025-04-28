@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { media } from '../styles/media';
-import { FadeInSection } from '../components/ui/FadeInSection';
+// src/sections/HeaderSection.jsx
+import React from 'react'
+import styled from 'styled-components'
+import { media } from '../styles/media'
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -9,21 +9,21 @@ const HeaderWrapper = styled.header`
   position: relative;
   overflow: hidden;
 
-  /* ── MOBILE & TABLET: white bg & stacked flex */
+  /* ── MOBILE & TABLET: white BG & stacked flex ── */
   background: ${({ theme }) => theme.colors.background};
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: ${({ theme }) => theme.space.md} 0;
 
-  /* ── DESKTOP (≥1024px): background image + full-viewport hero */
+  /* ── DESKTOP (≥1024px): background image + full-viewport hero ── */
   ${media.lg} {
     background: url('/talo_header.webp') no-repeat 100% 10% / 113% auto;
     display: block;
     padding: 0;
-    height: 100vh;                 /* restore full-height on desktop */
+    height: 100vh;                 /* full-height on desktop */
   }
-`;
+`
 
 const Photo = styled.img`
   width: 90%;
@@ -32,11 +32,11 @@ const Photo = styled.img`
   object-fit: cover;
   margin: ${({ theme }) => theme.space.md} 0;
 
-  /* hide on desktop (bg-image used there) */
+  /* hide on desktop (we use bg-image there) */
   ${media.lg} {
     display: none;
   }
-`;
+`
 
 const Overlay = styled.div`
   /* ── MOBILE & TABLET: stacked block in flow ── */
@@ -78,7 +78,7 @@ const Overlay = styled.div`
     & .intro,
     & h1 {
       position: relative;
-      top: -220px; /* adjust as needed */
+      top: -220px; /* tweak vertically as needed */
     }
 
     & .intro {
@@ -94,20 +94,18 @@ const Overlay = styled.div`
       margin-top: ${({ theme }) => theme.space.md};
     }
   }
-`;
+`
 
 export default function HeaderSection() {
   return (
     <HeaderWrapper>
       {/* intro + name */}
-      <FadeInSection>
-        <Overlay>
-          <p className="intro">Hi there, I’m</p>
-          <h1>Talo Vargas</h1>
-        </Overlay>
-      </FadeInSection>
+      <Overlay>
+        <p className="intro">Hi there, I’m</p>
+        <h1>Talo Vargas</h1>
+      </Overlay>
 
-      {/* portrait photo only on mobile/tablet */}
+      {/* portrait photo on mobile/tablet */}
       <Photo src="/talo_header.webp" alt="Portrait of Talo Vargas" />
 
       {/* body copy */}
@@ -122,5 +120,5 @@ export default function HeaderSection() {
         </p>
       </Overlay>
     </HeaderWrapper>
-  );
+  )
 }
