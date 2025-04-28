@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "Weather App",
-    "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast.",
+    "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast. This was developed collaboratively as a group effort.",
     "image": "/projects/weather-app.png",
     "demoUrl": "https://wind1weatherapp.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-weather-app",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "Web Accessibility Quiz",
-    "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity.",
+    "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity. Conceived as a team project.",
     "image": "/projects/web-accessibility.png",
     "demoUrl": "https://teamwind1.netlify.app/",
     "codeUrl": "https://github.com/Bianka2112/js-project-accessibility",
