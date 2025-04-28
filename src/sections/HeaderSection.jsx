@@ -1,96 +1,114 @@
-// src/sections/HeaderSection.jsx
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../styles/media';
 
 const HeaderWrapper = styled.header`
   width: 100%;
-  height: 100vh;
+  height: auto;                    /* mobile/tablet flow to content */
   position: relative;
   overflow: hidden;
 
-  /* Mobile: center cover */
-  background: url('/talo_header.webp') no-repeat center top / cover;
+  /* ── MOBILE & TABLET: white bg & stacked flex */
+  background: ${({ theme }) => theme.colors.background};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: ${({ theme }) => theme.space.md} 0;
 
-  /* Tablet (≥768px): slight pan & zoom */
-  ${media.md} {
-    background: url('/talo_header.webp') no-repeat 85% 25% / cover;
-  }
-
-  /* Desktop (≥1024px): full pan & zoom */
+  /* ── DESKTOP (≥1024px): background image + full-viewport hero */
   ${media.lg} {
-    background: url('/talo_header.webp') no-repeat 100% 10% / 110% auto;
+    background: url('/talo_header.webp') no-repeat 100% 10% / 113% auto;
+    display: block;
+    padding: 0;
+    height: 100vh;                 /* restore full-height on desktop */
+  }
+`;
+
+const Photo = styled.img`
+  width: 90%;
+  max-width: 800px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: ${({ theme }) => theme.space.md} 0;
+
+  /* hide on desktop (bg-image used there) */
+  ${media.lg} {
+    display: none;
   }
 `;
 
 const Overlay = styled.div`
-  /* Mobile: fully centered, narrow column */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* ── MOBILE & TABLET: stacked block in flow ── */
   width: 90%;
-  max-width: 800px;
-  color: ${({ theme }) => theme.colors.white};
+  max-width: 600px;
   text-align: center;
+  color: ${({ theme }) => theme.colors.text};
 
-  p.intro {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: ${({ theme }) => theme.space.xs};
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin: ${({ theme }) => theme.space.xs} 0;
-  }
-  h2 {
+  & .intro {
     font-size: 1.25rem;
-    font-style: italic;
     font-weight: 600;
     margin-bottom: ${({ theme }) => theme.space.sm};
   }
-  p.body {
+
+  & h1 {
+    font-size: 3rem;
+    margin: ${({ theme }) => theme.space.xs} 0;
+    line-height: 1.1;
+  }
+
+  & .body {
     font-size: 1rem;
     line-height: 1.6;
+    margin-top: ${({ theme }) => theme.space.xs};
   }
 
-  /* Tablet: wider column & moderate text sizes */
-  ${media.md} {
-    top: 45%;
-    width: 80vw;
-    max-width: 600px;
-    transform: translate(-50%, -50%);
-    p.intro { font-size: 1.25rem; }
-    h1       { font-size: 3.5rem; }
-    h2       { font-size: 1.5rem; }
-    p.body   { font-size: 1.25rem; }
-  }
-
-  /* Desktop: right-aligned, full sizes */
+  /* ── DESKTOP: absolutely positioned overlay ── */
   ${media.lg} {
-    top: 30%;
+    position: absolute;
+    top: 50%;
     right: ${({ theme }) => theme.space.lg};
-    left: auto;
     transform: translateY(-50%);
-    width: 60vw;
+    width: 50vw;
     max-width: 800px;
-    p.intro { font-size: 1.625rem; }
-    h1       { font-size: 4.5rem; }
-    h2       { font-size: 1.875rem; }
-    p.body   { font-size: 1.625rem; }
+    text-align: right;
+    color: ${({ theme }) => theme.colors.white};
+
+    /* lift intro & title up */
+    & .intro,
+    & h1 {
+      position: relative;
+      top: -220px; /* adjust as needed */
+    }
+
+    & .intro {
+      font-size: 1.625rem;
+    }
+
+    & h1 {
+      font-size: 4.5rem;
+    }
+
+    & .body {
+      font-size: 1.625rem;
+      margin-top: ${({ theme }) => theme.space.md};
+    }
   }
 `;
 
 export default function HeaderSection() {
   return (
     <HeaderWrapper>
+      {/* intro + name */}
       <Overlay>
         <p className="intro">Hi there, I’m</p>
         <h1>Talo Vargas</h1>
-        <h2>
-          Creative Frontend Developer with a Background in Journalism, Arts
-          Education and Music Tech
-        </h2>
+      </Overlay>
+
+      {/* portrait photo only on mobile/tablet */}
+      <Photo src="/talo_header.webp" alt="Portrait of Talo Vargas" />
+
+      {/* body copy */}
+      <Overlay as="div">
         <p className="body">
           I’m a frontend developer who brings together code, creativity, and
           communication. With a background in public libraries, journalism, and
