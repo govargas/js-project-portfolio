@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section }   from '../components/ui/SectionContainer';
 import { Headline }  from '../components/ui/Headline';
+import { FadeInSection } from '../components/ui/FadeInSection';
 import { Photo as BasePhoto } from '../components/ui/Photo';
 
 const ContactWrapper = styled(Section)`
@@ -62,13 +63,13 @@ const Icons = styled.div`
 export default function ContactSection() {
   return (
     <ContactWrapper id="contact">
-      <WhiteHeadline>Let’s Talk</WhiteHeadline>
+      <FadeInSection><WhiteHeadline>Let’s Talk</WhiteHeadline></FadeInSection>
 
-      <ProfileWrapper>
+      <FadeInSection><ProfileWrapper>
         <Photo src="/talo_profile.webp" alt="Talo Vargas" />
-      </ProfileWrapper>
+      </ProfileWrapper></FadeInSection>
 
-      <Info>
+      <FadeInSection><Info>
         <p>Talo Vargas</p>
         <p>+46 (0)725 79 46 77</p>
         <p>
@@ -76,9 +77,9 @@ export default function ContactSection() {
             talovargasd@gmail.com
           </a>
         </p>
-      </Info>
+      </Info></FadeInSection>
 
-      <Icons>
+      <FadeInSection><Icons>
         {/* invert only the LinkedIn SVG */}
         <IconLink href="https://www.linkedin.com/in/talovargas/" invert aria-label="LinkedIn">
           <img src="/linkedin.svg" alt="" />
@@ -88,7 +89,7 @@ export default function ContactSection() {
         <IconLink href="https://github.com/govargas/" aria-label="GitHub">
           <img src="/github.svg" alt="" />
         </IconLink>
-      </Icons>
+      </Icons></FadeInSection>
     </ContactWrapper>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { media } from '../styles/media';
+import { FadeInSection } from '../components/ui/FadeInSection';
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -99,10 +100,12 @@ export default function HeaderSection() {
   return (
     <HeaderWrapper>
       {/* intro + name */}
-      <Overlay>
-        <p className="intro">Hi there, I’m</p>
-        <h1>Talo Vargas</h1>
-      </Overlay>
+      <FadeInSection>
+        <Overlay>
+          <p className="intro">Hi there, I’m</p>
+          <h1>Talo Vargas</h1>
+        </Overlay>
+      </FadeInSection>
 
       {/* portrait photo only on mobile/tablet */}
       <Photo src="/talo_header.webp" alt="Portrait of Talo Vargas" />

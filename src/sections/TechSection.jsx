@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Headline } from '../components/ui/Headline';
+import { FadeInSection } from '../components/ui/FadeInSection'
 import { media }   from '../styles/media';
 
 const TechWrapper = styled.section`
@@ -46,8 +47,8 @@ export default function TechSection() {
   return (
     <TechWrapper id="tech">
       <Content>
-        <CenteredHeadline>Tech</CenteredHeadline>
-        <List>{skills.join(', ')}</List>
+        <FadeInSection><CenteredHeadline>Tech</CenteredHeadline></FadeInSection>
+        <FadeInSection><List>{skills.join(', ')}</List></FadeInSection>
       </Content>
     </TechWrapper>
   );

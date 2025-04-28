@@ -24,7 +24,7 @@
     "image": "/projects/weather-app.png",
     "demoUrl": "https://wind1weatherapp.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-weather-app",
-    "tags": ["HTML5","CSS3","JavaScript","TypeScript"]
+    "tags": ["HTML5","CSS3","JavaScript","TypeScript","API"]
   },
   {
     "id": 4,
@@ -33,6 +33,6 @@
     "image": "/projects/web-accessibility.png",
     "demoUrl": "https://teamwind1.netlify.app/",
     "codeUrl": "https://github.com/Bianka2112/js-project-accessibility",
-    "tags": ["HTML5","CSS3","JavaScript"]
+    "tags": ["HTML5","CSS3","JavaScript","WCAG 2.1"]
   }
 ]

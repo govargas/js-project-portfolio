@@ -3,6 +3,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Section }  from '../components/ui/SectionContainer';
 import { Headline } from '../components/ui/Headline';
+import { FadeInSection } from '../components/ui/FadeInSection';
 import { Button }   from '../components/ui/Button';
 import { Tag }      from '../components/ui/Tag';
 import { Photo as BasePhoto } from '../components/ui/Photo';
@@ -81,7 +82,7 @@ const ButtonGroup = styled.div`
 export default function ProjectsSection() {
   return (
     <Section id="featured-projects">
-      <Headline>Featured Projects</Headline>
+      <FadeInSection><Headline>Featured Projects</Headline></FadeInSection>
       <Grid>
         {projects.map((p, i) => {
           // split tags into rows of max 3

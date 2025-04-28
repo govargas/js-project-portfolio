@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Section }   from '../components/ui/SectionContainer';
 import { Headline }  from '../components/ui/Headline';
+import { FadeInSection } from '../components/ui/FadeInSection'
 import { Tag }       from '../components/ui/Tag';
 import { media }     from '../styles/media';
 
@@ -66,9 +67,10 @@ const Item = styled.span`
 export default function SkillsSection() {
   return (
     <SkillsWrapper id="skills">
-      <WhiteHeadline>Skills</WhiteHeadline>
+      <FadeInSection><WhiteHeadline>Skills</WhiteHeadline></FadeInSection>
 
       <Grid>
+      <FadeInSection>
         <Column>
           <ColumnTag>Code</ColumnTag>
           <Item>HTML5</Item>
@@ -77,6 +79,7 @@ export default function SkillsSection() {
           <Item>Styled Components</Item>
           <Item>GitHub</Item>
         </Column>
+      </FadeInSection>
 
         <Column>
           <ColumnTag>Toolbox</ColumnTag>
