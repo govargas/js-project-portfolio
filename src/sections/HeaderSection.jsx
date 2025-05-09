@@ -111,7 +111,7 @@ export default function HeaderSection() {
       {/* body copy */}
       <Overlay as="div">
         <p className="body">
-          I’m a frontend developer who brings together code, creativity, and
+          I’m a full stack developer who brings together code, creativity, and
           communication. With a background in public libraries, journalism, and
           music, I’m used to turning complex ideas into clear, engaging
           experiences for diverse audiences. Whether collaborating in a team or
