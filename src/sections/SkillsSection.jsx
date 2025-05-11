@@ -76,7 +76,9 @@ export default function SkillsSection() {
           <Item>HTML5</Item>
           <Item>CSS3</Item>
           <Item>JavaScript ES6</Item>
+          <Item>React.js</Item>
           <Item>Styled Components</Item>
+          <Item>Tailwind</Item>
           <Item>GitHub</Item>
         </Column>
       </FadeInSection>
@@ -105,7 +107,6 @@ export default function SkillsSection() {
           <ColumnTag>Upcoming</ColumnTag>
           <Item>MongoDB</Item>
           <Item>Node.js</Item>
-          <Item>React</Item>
           <Item>Supabase</Item>
         </Column>
       </FadeInSection>
@@ -113,6 +114,7 @@ export default function SkillsSection() {
       <FadeInSection>
         <Column>
           <ColumnTag>More</ColumnTag>
+          <Item>Strong Communication Skills</Item>
           <Item>Branding</Item>
           <Item>Strategy</Item>
           <Item>Process Design</Item>

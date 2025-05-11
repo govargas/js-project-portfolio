@@ -1,38 +1,56 @@
 [
   {
     "id": 1,
-    "title": "Kaffe Colombia Express",
-    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
-    "image": "/projects/kaffe-colombia.png",
-    "demoUrl": "https://kaffekolombia.netlify.app/",
-    "codeUrl": "https://github.com/govargas/js-project-business-site",
-    "tags": ["HTML5","CSS3","JavaScript"]
-  },
+    "title": "Happy Thoughts",
+    "description": "A simple, positive-messaging web app built with React, Vite, and Tailwind CSS. Users can post “happy thoughts,” view the latest messages from a public API, and send likes.",
+    "image": "/projects/happy-thoughts.png",
+    "demoUrl": "https://happythoughtstalo.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-happy-thoughts",
+    "tags": ["HTML5","CSS3","JavaScript", "React.js", "API", "TailwindCSS"]
+  },  
   {
     "id": 2,
+    "title": "Portfolio",
+    "description": "My personal coding portfolio, built as a React application with Vite and styled-components, showcasing my skills, JSON-formatted projects and articles, and contact information.",
+    "image": "/projects/talo-portfolio.webp",
+    "demoUrl": "https://taloportfolio.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-portfolio",
+    "tags": ["HTML5","CSS3","JavaScript", "JSON", "styled components", "Vite"]
+  },
+    {
+    "id": 3,
     "title": "Recipe Library",
-    "description": "A recipe search app that fetches data from an external API and displays dishes from around the world.",
-    "image": "/projects/recipe-library.png",
+    "description": "A dynamic web app that fetches real recipe data from Spoonacular API and displays recipe cards when the page loads. It lets users filter by dietary preferences, cuisine, cooking time, and ingredient count, and sort recipes by various criteria. Users can also click a 'Surprise me!' button to display a random recipe.",
+    "image": "/projects/recipe-library.webp",
     "demoUrl": "https://talorecipes.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-recipe-library",
     "tags": ["HTML5","CSS3","JavaScript","API"]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Weather App",
     "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast. This was developed collaboratively as a group effort.",
-    "image": "/projects/weather-app.png",
+    "image": "/projects/weather-app.webp",
     "demoUrl": "https://wind1weatherapp.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-weather-app",
     "tags": ["HTML5","CSS3","JavaScript","TypeScript","API"]
   },
-  {
-    "id": 4,
+    {
+    "id": 5,
     "title": "Web Accessibility Quiz",
     "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity. Conceived as a team project.",
-    "image": "/projects/web-accessibility.png",
+    "image": "/projects/web-accessibility.webp",
     "demoUrl": "https://teamwind1.netlify.app/",
     "codeUrl": "https://github.com/Bianka2112/js-project-accessibility",
     "tags": ["HTML5","CSS3","JavaScript","WCAG 2.1"]
+  },
+    {
+    "id": 6,
+    "title": "Kaffe Colombia Express",
+    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
+    "image": "/projects/kaffe-colombia.webp",
+    "demoUrl": "https://kaffekolombia.netlify.app/",
+    "codeUrl": "https://github.com/govargas/js-project-business-site",
+    "tags": ["HTML5","CSS3","JavaScript"]
   }
 ]

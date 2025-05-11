@@ -1,18 +1,10 @@
 [
   {
     "id": 1,
-    "date": "April 30th",
+    "date": "May 9th",
     "title": "This Is How I Got Here",
-    "excerpt": "I moved to Sweden at 24 to start over. I had no job, no network, and didn't speak the language. A decade later, I’ve built a life, a family, and a new career. Here’s how I got there... (Coming soon)",
-    "url": "https://yourblog.com/this-is-how-i-got-here",
-    "image": "/articles/how-i-got-here.jpg"
-  },
-  {
-    "id": 2,
-    "date": "July 14th",
-    "title": "How to stop being scared: Learning to love code",
-    "excerpt": "The chat bot app is a conversational AI-powered tool designed to enhance user experience…",
-    "url": "https://yourblog.com/learning-to-love-code",
-    "image": "/articles/learning-to-love-code.png"
+    "excerpt": "I moved to Sweden at 24 to start over. I had no job, no network, and didn't speak the language. A decade later, I’ve built a life, a family, and a new career. Here’s how I got there...",
+    "url": "https://www.linkedin.com/posts/talovargas_i-moved-to-sweden-at-24-no-job-no-network-activity-7326603418511265792-7B2m",
+    "image": "/articles/1st_linkedinpost.webp"
   }
 ]
