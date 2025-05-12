@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ProjectCard({ image, tags, title, description, demoUrl, codeUrl }) {
   return (
-    <article className="project-card">
+    <article>
       <img src={image} alt={`${title} screenshot`} />
       <div>
         <div className="tags">
