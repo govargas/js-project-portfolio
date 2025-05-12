@@ -32,7 +32,7 @@ const Grid = styled.div`
   ${media.lg} {
     /* desktop: five columns */
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    justify-items: center;
+    justify-items: start;
   }
 `;
 
@@ -41,13 +41,17 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.space.sm};
-  text-align: ${({ theme }) => (window.innerWidth >= 1024 ? 'left' : 'center')};
+  text-align: center;
+
+  ${media.lg} {
+    text-align: left;
+  }
 `;
 
 // use Tag primitive, but make it fixed-width (180px) and centered on mobile/tablet
 const ColumnTag = styled(Tag)`
-  flex: none;                                 /* don’t stretch */
-  width: 180px;                               /* fixed width */
+  width: 100%;
+  max-width: 180px;
   margin: 0 auto;                             /* center on mobile/tablet */
   background: ${({ theme }) => theme.colors.primary}; /* white */
   color: ${({ theme }) => theme.colors.background}; /* black */
@@ -114,7 +118,6 @@ export default function SkillsSection() {
       <FadeInSection>
         <Column>
           <ColumnTag>More</ColumnTag>
-          <Item>Strong Communication Skills</Item>
           <Item>Branding</Item>
           <Item>Strategy</Item>
           <Item>Process Design</Item>
