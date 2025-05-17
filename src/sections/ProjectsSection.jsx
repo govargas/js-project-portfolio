@@ -10,25 +10,29 @@ import { Photo as BasePhoto } from '../components/ui/Photo';
 import { media }    from '../styles/media';
 import projects     from '../data/projects.json';
 
+// ── GRID: 64px gap by default, 128px on desktop ──
 const Grid = styled.div`
   display: grid;
-  gap: ${({ theme }) => theme.space.xl};
-  grid-template-columns: 1fr;
+  gap: ${({ theme }) => theme.space.xxl}; /* 64px */
+
+  ${media.lg} {
+    gap: 128px;                           /* 128px between cards */
+    grid-template-columns: 1fr;           /* keep one column */
+  }
 `;
 
+// ── CARD: 64px gap between image & info on small, 125px on desktop ──
 const Card = styled.article.withConfig({
   shouldForwardProp: prop => prop !== 'reverse'
 })`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};
-  overflow: hidden;
+  gap: ${({ theme }) => theme.space.xxl}; /* 64px */
 
   ${media.lg} {
     flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
-    margin-bottom: ${({ theme }) => theme.space.xxl};
-    gap: ${({ theme }) => theme.space.xl};
+    gap: 125px;                            /* 125px between image & info */
   }
 `;
 
@@ -42,10 +46,26 @@ const ProjectPhoto = styled(BasePhoto)`
   }
 `;
 
-// dynamic tag rows: stretch only if exactly 3 in that row
-  const TagRow = styled.div.withConfig({
-    shouldForwardProp: prop => prop !== 'equal'
-  })`
+const Info = styled.div`
+  width: 100%;
+  flex: 1;
+  padding: ${({ theme }) => theme.space.md} 0;
+
+  ${media.md} {
+    width: 80%;
+    text-align: left;
+  }
+
+  ${media.lg} {
+    width: 55%;
+    padding: 0 ${({ theme }) => theme.space.lg};
+  }
+`;
+
+// ── split tags into rows, stretch only when exactly 3 in a row ──
+const TagRow = styled.div.withConfig({
+  shouldForwardProp: prop => prop !== 'equal'
+})`
   display: flex;
   gap: ${({ theme }) => theme.space.sm};
   ${({ equal }) =>
@@ -59,23 +79,6 @@ const ProjectPhoto = styled(BasePhoto)`
   }
 `;
 
-const Info = styled.div`
-  width: 100%;
-  flex: 1;
-  padding: ${({ theme }) => theme.space.md} 0;
-
-  ${media.md} {
-    width: 80%;
-    padding: ${({ theme }) => theme.space.md} 0;
-    text-align: left;
-  }
-
-  ${media.lg} {
-    width: 55%;
-    padding: 0 ${({ theme }) => theme.space.lg};
-  }
-`;
-
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -86,7 +89,10 @@ const ButtonGroup = styled.div`
 export default function ProjectsSection() {
   return (
     <Section id="featured-projects">
-      <FadeInSection><Headline>Featured Projects</Headline></FadeInSection>
+      <FadeInSection>
+        <Headline>Featured Projects</Headline>
+      </FadeInSection>
+
       <Grid>
         {projects.map((p, i) => {
           // split tags into rows of max 3
@@ -98,6 +104,7 @@ export default function ProjectsSection() {
           return (
             <Card key={p.id} reverse={i % 2 === 1}>
               <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
+
               <Info>
                 {rows.map((row, idx) => (
                   <TagRow key={idx} equal={row.length === 3}>

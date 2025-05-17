@@ -32,7 +32,7 @@ const Grid = styled.div`
   ${media.lg} {
     /* desktop: five columns */
     grid-template-columns: repeat(5, minmax(0, 1fr));
-    justify-items: start;
+    justify-items: center;
   }
 `;
 

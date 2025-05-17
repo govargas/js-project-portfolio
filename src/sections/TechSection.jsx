@@ -1,18 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Section } from '../components/ui/SectionContainer';
 import { Headline } from '../components/ui/Headline';
-import { FadeInSection } from '../components/ui/FadeInSection'
+import { FadeInSection } from '../components/ui/FadeInSection';
 import { media }   from '../styles/media';
 
-const TechWrapper = styled.section`
+const TechWrapper = styled(Section)`
   width: 100%;
   background: ${({ theme }) => theme.colors.primary};   /* pure black */
   color: ${({ theme }) => theme.colors.background};     /* white text */
-  padding: ${({ theme }) => `${theme.space.xl} ${theme.space.md}`};
-
-  ${media.sm} {
-    padding: ${({ theme }) => `${theme.space.lg} ${theme.space.sm}`};
-  }
 `;
 
 const Content = styled.div`

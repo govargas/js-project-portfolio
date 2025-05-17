@@ -9,7 +9,6 @@ const ContactWrapper = styled(Section)`
   background: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.white};
   text-align: center;
-  padding: ${({ theme }) => `${theme.space.xl} 0`};
 `;
 
 // force the Headline to be white here
