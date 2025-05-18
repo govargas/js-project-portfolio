@@ -11,8 +11,17 @@ import articles     from '../data/articles.json';
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xxl};
-  /* always one column on mobile + tablet */
-  grid-template-columns: 1fr;
+
+  ${media.md} {
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
+
+  ${media.lg} {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 const Card = styled.article`
@@ -21,18 +30,23 @@ const Card = styled.article`
   overflow: hidden;
   border-radius: 8px;
 
-  /* tablet+: row layout with gap & bottom margin */
   ${media.md} {
     flex-direction: row;
     align-items: flex-start;
-    gap: ${({ theme }) => theme.space.xxl};     
+    gap: ${({ theme }) => theme.space.xxl};
+    margin-bottom: ${({ theme }) => theme.space.xxl};
+
+  ${media.lg} {
+    gap: 125px;
     margin-bottom: ${({ theme }) => theme.space.xxl};
   }
 `;
 
 const ArticlePhoto = styled(BasePhoto)`
-  width: 100%;
-  border-radius: 8px;
+  // width: 100%;
+  height: 200px;
+  align-self: stretch;
+  border-radius: 12px;
   object-fit: cover;
 
   /* tablet+: fixed 200×320 */
@@ -41,14 +55,17 @@ const ArticlePhoto = styled(BasePhoto)`
     height: 320px;
     flex-shrink: 0;
   }
+
+  ${media.lg} {
+    width: 479px;
+    align-self: stretch;
+  }
 `;
 
 const Content = styled.div`
   padding: ${({ theme }) => theme.space.md} 0;
 
   ${media.md} {
-    /* fill the same 320px height, and take the rest of the row */
-    height: 320px;
     flex: 1;
     padding: 0 ${({ theme }) => theme.space.md};
     display: flex;
@@ -64,6 +81,14 @@ const TagContainer = styled.div`
 
 const ButtonWrapper = styled.div`
   margin-top: ${({ theme }) => theme.space.md};
+
+  @media (max-width: 767px) {
+    & > a {
+      width: 100%;
+      max-width: 260px;
+      margin: 0;
+    }
+  }
 `;
 
 export default function ArticlesSection() {

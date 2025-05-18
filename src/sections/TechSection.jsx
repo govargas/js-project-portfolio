@@ -17,13 +17,11 @@ const Content = styled.div`
   text-align: center;
 `;
 
-// force headline white
 const CenteredHeadline = styled(Headline)`
   color: ${({ theme }) => theme.colors.background};
   margin-bottom: ${({ theme }) => theme.space.lg};
 `;
 
-// one line of comma-separated skills
 const List = styled.p`
   color: ${({ theme }) => theme.colors.background};
   font-size: ${({ theme }) => theme.fontSizes.body};

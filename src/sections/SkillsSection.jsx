@@ -11,13 +11,11 @@ const SkillsWrapper = styled(Section)`
   color: ${({ theme }) => theme.colors.white};         /* white text */
 `;
 
-// override the Headline to always be white here
 const WhiteHeadline = styled(Headline)`
   color: ${({ theme }) => theme.colors.white};  
   margin-bottom: ${({ theme }) => theme.space.xl};
 `;
 
-// Grid: single column on mobile/tablet, five columns on desktop
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.lg};
@@ -36,7 +34,6 @@ const Grid = styled.div`
   }
 `;
 
-// each column container
 const Column = styled.div`
   display: flex;
   flex-direction: column;
@@ -48,7 +45,6 @@ const Column = styled.div`
   }
 `;
 
-// use Tag primitive, but make it fixed-width (180px) and centered on mobile/tablet
 const ColumnTag = styled(Tag)`
   width: 100%;
   max-width: 180px;

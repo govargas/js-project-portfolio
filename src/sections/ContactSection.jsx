@@ -11,7 +11,6 @@ const ContactWrapper = styled(Section)`
   text-align: center;
 `;
 
-// force the Headline to be white here
 const WhiteHeadline = styled(Headline)`
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: ${({ theme }) => theme.space.lg};
@@ -39,7 +38,6 @@ const Info = styled.div`
   }
 `;
 
-// icon links: pass `invert` to invert only LinkedIn
   const IconLink = styled.a.withConfig({
     shouldForwardProp: prop => prop !== 'invert'
   })`
@@ -81,12 +79,10 @@ export default function ContactSection() {
       </Info></FadeInSection>
 
       <FadeInSection><Icons>
-        {/* invert only the LinkedIn SVG */}
         <IconLink href="https://www.linkedin.com/in/talovargas/" invert aria-label="LinkedIn profile">
           <img src="/linkedin.svg" alt="" />
         </IconLink>
 
-        {/* GitHub SVG stays as-is */}
         <IconLink href="https://github.com/govargas/" aria-label="GitHub">
           <img src="/github.svg" alt="" />
         </IconLink>

@@ -1,4 +1,3 @@
-// src/sections/ProjectsSection.jsx
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Section }  from '../components/ui/SectionContainer';
@@ -10,29 +9,26 @@ import { Photo as BasePhoto } from '../components/ui/Photo';
 import { media }    from '../styles/media';
 import projects     from '../data/projects.json';
 
-// ── GRID: 64px gap by default, 128px on desktop ──
 const Grid = styled.div`
   display: grid;
   gap: ${({ theme }) => theme.space.xxl}; /* 64px */
 
   ${media.lg} {
     gap: 128px;                           /* 128px between cards */
-    grid-template-columns: 1fr;           /* keep one column */
   }
 `;
 
-// ── CARD: 64px gap between image & info on small, 125px on desktop ──
 const Card = styled.article.withConfig({
   shouldForwardProp: prop => prop !== 'reverse'
 })`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.space.xxl}; /* 64px */
+  gap: ${({ theme }) => theme.space.xl}; /* 32px */
 
   ${media.lg} {
     flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
     align-items: flex-start;
-    gap: 125px;                            /* 125px between image & info */
+    gap: 125px;                            /* desktop image ↔ info */
   }
 `;
 
@@ -49,7 +45,6 @@ const ProjectPhoto = styled(BasePhoto)`
 const Info = styled.div`
   width: 100%;
   flex: 1;
-  padding: ${({ theme }) => theme.space.md} 0;
 
   ${media.md} {
     width: 80%;
@@ -60,20 +55,23 @@ const Info = styled.div`
     width: 55%;
     padding: 0 ${({ theme }) => theme.space.lg};
   }
+
+  h3 {
+    margin-top: ${({ theme }) => theme.space.md}; /* ensure 16px above title */
+  }
 `;
 
-// ── split tags into rows, stretch only when exactly 3 in a row ──
 const TagRow = styled.div.withConfig({
   shouldForwardProp: prop => prop !== 'equal'
 })`
   display: flex;
-  gap: ${({ theme }) => theme.space.sm};
+  gap: ${({ theme }) => theme.space.sm}; /* 8px horizontally */
   ${({ equal }) =>
     equal &&
     css`
       > * { flex: 1; }
     `}
-  /* vertical spacing between rows */
+
   &:not(:last-child) {
     margin-bottom: ${({ theme }) => theme.space.sm};
   }
@@ -82,8 +80,17 @@ const TagRow = styled.div.withConfig({
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: ${({ theme }) => theme.space.sm};
-  margin-top: ${({ theme }) => theme.space.md};
+  gap: ${({ theme }) => theme.space.sm};    /* 8px */
+  margin-top: ${({ theme }) => theme.space.xl}; /* 32px */
+
+  /* mobile-only: make fixed-width buttons shrink and center */
+  @media (max-width: 767px) {
+    & > a {
+      width: 100%;
+      max-width: 260px;  /* account for container padding */
+      margin: 0;
+    }
+  }
 `;
 
 export default function ProjectsSection() {
@@ -95,7 +102,6 @@ export default function ProjectsSection() {
 
       <Grid>
         {projects.map((p, i) => {
-          // split tags into rows of max 3
           const rows = [];
           for (let j = 0; j < p.tags.length; j += 3) {
             rows.push(p.tags.slice(j, j + 3));
@@ -103,7 +109,10 @@ export default function ProjectsSection() {
 
           return (
             <Card key={p.id} reverse={i % 2 === 1}>
-              <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
+              <ProjectPhoto
+                src={p.image}
+                alt={`${p.title} screenshot`}
+              />
 
               <Info>
                 {rows.map((row, idx) => (

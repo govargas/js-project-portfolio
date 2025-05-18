@@ -1,4 +1,3 @@
-// src/components/ArticleCard.jsx
 import React from 'react';
 
 export default function ArticleCard({ date, title, excerpt, url }) {
