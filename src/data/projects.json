@@ -17,6 +17,22 @@
   },
   {
     "id": 2,
+    "title": "Tuner Web App",
+    "description": "A precise and responsive instrument tuner application built with React and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a sleek, dark-themed interface.",
+    "image": "/projects/tuner-web-app.webp",
+    "demoUrl": "https://tatuner.netlify.app/",
+    "codeUrl": "https://github.com/govargas/tuner-web-app",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Web Audio API",
+      "Zustand"
+    ]
+  },
+  {
+    "id": 3,
     "title": "Happy Thoughts",
     "description": "A simple, positive-messaging web app built with React, Vite, and Tailwind CSS. Users can post “happy thoughts,” view the latest messages from a public API, and send likes.",
     "image": "/projects/happy-thoughts.png",
@@ -25,7 +41,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "React.js", "API", "TailwindCSS"]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "CINEBASE - Movie Database",
     "description": "A responsive, accessible React and Tailwind CSS web application that lets users browse popular movies fetched from the TMDB API. It features dynamic multi-page navigation via React Router, a splash screen animation using Motion, custom branding, and SEO optimizations.",
     "image": "/projects/cinebase.webp",
@@ -43,7 +59,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Portfolio",
     "description": "My personal coding portfolio, built as a React application with Vite and styled-components, showcasing my skills, JSON-formatted projects and articles, and contact information.",
     "image": "/projects/talo-portfolio.webp",
@@ -52,7 +68,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "JSON", "styled components", "Vite"]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Recipe Library",
     "description": "A dynamic web app that fetches real recipe data from Spoonacular API and displays recipe cards when the page loads. It lets users filter by dietary preferences, cuisine, cooking time, and ingredient count, and sort recipes by various criteria. Users can also click a 'Surprise me!' button to display a random recipe.",
     "image": "/projects/recipe-library.webp",
@@ -61,7 +77,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "API"]
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Weather App",
     "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast. This was developed collaboratively as a group effort.",
     "image": "/projects/weather-app.webp",
@@ -70,7 +86,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "TypeScript", "API"]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Web Accessibility Quiz",
     "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity. Conceived as a team project.",
     "image": "/projects/web-accessibility.webp",
@@ -79,7 +95,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "WCAG 2.1"]
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Kaffe Colombia Express",
     "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
     "image": "/projects/kaffe-colombia.webp",
