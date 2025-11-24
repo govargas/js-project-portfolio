@@ -18,7 +18,7 @@
   {
     "id": 2,
     "title": "Tuner Web App",
-    "description": "A precise and responsive instrument tuner application built with React and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a sleek, dark-themed interface.",
+    "description": "A precise and responsive instrument tuner application built with React and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a simple, dark-themed interface.",
     "image": "/projects/tuner-web-app.webp",
     "demoUrl": "https://tatuner.netlify.app/",
     "codeUrl": "https://github.com/govargas/tuner-web-app",
