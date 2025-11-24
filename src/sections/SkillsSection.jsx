@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Section }   from '../components/ui/SectionContainer';
-import { Headline }  from '../components/ui/Headline';
-import { FadeInSection } from '../components/ui/FadeInSection'
-import { Tag }       from '../components/ui/Tag';
-import { media }     from '../styles/media';
+import React from "react";
+import styled from "styled-components";
+import { Section } from "../components/ui/SectionContainer";
+import { Headline } from "../components/ui/Headline";
+import { FadeInSection } from "../components/ui/FadeInSection";
+import { Tag } from "../components/ui/Tag";
+import { media } from "../styles/media";
 
 const SkillsWrapper = styled(Section)`
-  background: ${({ theme }) => theme.colors.primary};   /* black */
-  color: ${({ theme }) => theme.colors.white};         /* white text */
+  background: ${({ theme }) => theme.colors.primary}; /* black */
+  color: ${({ theme }) => theme.colors.white}; /* white text */
 `;
 
 const WhiteHeadline = styled(Headline)`
-  color: ${({ theme }) => theme.colors.white};  
+  color: ${({ theme }) => theme.colors.white};
   margin-bottom: ${({ theme }) => theme.space.xl};
 `;
 
@@ -48,14 +48,14 @@ const Column = styled.div`
 const ColumnTag = styled(Tag)`
   width: 100%;
   max-width: 180px;
-  margin: 0 auto;                             /* center on mobile/tablet */
+  margin: 0 auto; /* center on mobile/tablet */
   background: ${({ theme }) => theme.colors.primary}; /* white */
   color: ${({ theme }) => theme.colors.background}; /* black */
-  border-color: ${({ theme }) => theme.colors.background}; 
+  border-color: ${({ theme }) => theme.colors.background};
   font-weight: 600;
 
   ${media.lg} {
-    margin: 0;      /* reset to left-align on desktop */
+    margin: 0; /* reset to left-align on desktop */
   }
 `;
 
@@ -67,70 +67,87 @@ const Item = styled.span`
 export default function SkillsSection() {
   return (
     <SkillsWrapper id="skills">
-      <FadeInSection><WhiteHeadline>Skills</WhiteHeadline></FadeInSection>
+      <FadeInSection>
+        <WhiteHeadline>Skills</WhiteHeadline>
+      </FadeInSection>
 
       <Grid>
-      <FadeInSection>
-        <Column>
-          <ColumnTag>Code</ColumnTag>
-          <Item>HTML5</Item>
-          <Item>CSS3</Item>
-          <Item>JavaScript ES6</Item>
-          <Item>React.js</Item>
-          <Item>Styled Components</Item>
-          <Item>Tailwind</Item>
-          <Item>GitHub</Item>
-        </Column>
-      </FadeInSection>
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Code</ColumnTag>
+            <Item>HTML5</Item>
+            <Item>CSS3</Item>
+            <Item>TypeScript</Item>
+            <Item>JavaScript</Item>
+            <Item>React.js</Item>
+            <Item>Web Audio API</Item>
+            <Item>Next.js</Item>
+            <Item>Node.js</Item>
+            <Item>Express.js</Item>
+            <Item>MongoDB</Item>
+            <Item>Storybook</Item>
+            <Item>Styled Components</Item>
+            <Item>Tailwind CSS</Item>
+            <Item>GitHub</Item>
+          </Column>
+        </FadeInSection>
 
-      <FadeInSection>
-        <Column>
-          <ColumnTag>Toolbox</ColumnTag>
-          <Item>Atom</Item>
-          <Item>Postman</Item>
-          <Item>Adobe After Effects</Item>
-          <Item>Adobe Photoshop</Item>
-          <Item>Adobe Premiere</Item>
-          <Item>Adobe Illustrator</Item>
-          <Item>Figma</Item>
-          <Item>DaVinci Resolve</Item>
-          <Item>Keynote</Item>
-          <Item>Slack</Item>
-          <Item>Ableton Live</Item>
-          <Item>Logic Pro X</Item>
-          <Item>Bitwig</Item>
-        </Column>
-      </FadeInSection>
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Toolbox</ColumnTag>
+            <Item>Atom</Item>
+            <Item>Postman</Item>
+            <Item>Adobe After Effects</Item>
+            <Item>Adobe Photoshop</Item>
+            <Item>Adobe Premiere</Item>
+            <Item>Adobe Illustrator</Item>
+            <Item>Figma</Item>
+            <Item>DaVinci Resolve</Item>
+            <Item>Keynote</Item>
+            <Item>Slack</Item>
+            <Item>Canva</Item>
+            <Item>Figma</Item>
+            <Item>Ableton Live</Item>
+            <Item>Logic Pro X</Item>
+            <Item>Bitwig</Item>
+          </Column>
+        </FadeInSection>
 
-      <FadeInSection>
-        <Column>
-          <ColumnTag>Upcoming</ColumnTag>
-          <Item>MongoDB</Item>
-          <Item>Node.js</Item>
-          <Item>Supabase</Item>
-        </Column>
-      </FadeInSection>
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Upcoming</ColumnTag>
+            <Item>Supabase</Item>
+            <Item>JUCE</Item>
+            <Item>C++</Item>
+          </Column>
+        </FadeInSection>
 
-      <FadeInSection>
-        <Column>
-          <ColumnTag>More</ColumnTag>
-          <Item>Branding</Item>
-          <Item>Strategy</Item>
-          <Item>Process Design</Item>
-          <Item>Concept Development</Item>
-          <Item>Agile methodology</Item>
-        </Column>
-      </FadeInSection>  
+        <FadeInSection>
+          <Column>
+            <ColumnTag>More</ColumnTag>
+            <Item>Agile methodology</Item>
+            <Item>Jira</Item>
+            <Item>Confluence</Item>
+            <Item>Slack</Item>
+            <Item>Canva</Item>
+            <Item>Kanban</Item>
+            <Item>Git</Item>
+            <Item>Branding</Item>
+            <Item>Strategy</Item>
+            <Item>Process Design</Item>
+            <Item>Concept Development</Item>
+          </Column>
+        </FadeInSection>
 
-      <FadeInSection>
-        <Column>
-          <ColumnTag>Languages</ColumnTag>
-          <Item>Spanish</Item>
-          <Item>Swedish</Item>
-          <Item>English</Item>
-          <Item>German</Item>
-        </Column>
-      </FadeInSection>    
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Languages</ColumnTag>
+            <Item>Spanish</Item>
+            <Item>Swedish</Item>
+            <Item>English</Item>
+            <Item>German</Item>
+          </Column>
+        </FadeInSection>
       </Grid>
     </SkillsWrapper>
   );

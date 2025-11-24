@@ -1,13 +1,20 @@
 [
-    {
+  {
     "id": 1,
-    "title": "CINEBASE - Movie Database",
-    "description": "A responsive, accessible React and Tailwind CSS web application that lets users browse popular movies fetched from the TMDB API. It features dynamic multi‑page navigation via React Router, a splash screen animation using Motion, custom branding, and SEO optimizations.",
-    "image": "/projects/cinebase.webp",
-    "demoUrl": "https://movies-project-react-router.netlify.app/",
-    "codeUrl": "https://github.com/jszor/js-project-movies",
-    "tags": ["HTML5","CSS3","JavaScript", "React.js", "React Router", "API", "TailwindCSS", "Motion"]
-  },  
+    "title": "Power Play Showcase - Internal Developer Tool (Epidemic Sound)",
+    "description": "An internal developer tool built during my internship at Epidemic Sound. It was built with Storybook, React, and TypeScript to showcase Epidemic Sound’s headless web audio engine. It provides interactive “recipes” for multi-track playback, stems mixing, signal-processing utilities like gain metering, and makes it easier for developers to prototype, test, and demo new audio features without a full client app.",
+    "image": "/projects/epidemic.webp",
+    "demoUrl": "",
+    "codeUrl": "",
+    "tags": [
+      "TypeScript",
+      "React.js",
+      "Storybook",
+      "Web Audio",
+      "Developer Tool",
+      "Internal Tool"
+    ]
+  },
   {
     "id": 2,
     "title": "Happy Thoughts",
@@ -15,51 +22,69 @@
     "image": "/projects/happy-thoughts.png",
     "demoUrl": "https://happythoughtstalo.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-happy-thoughts",
-    "tags": ["HTML5","CSS3","JavaScript", "React.js", "API", "TailwindCSS"]
-  },  
+    "tags": ["HTML5", "CSS3", "JavaScript", "React.js", "API", "TailwindCSS"]
+  },
   {
     "id": 3,
+    "title": "CINEBASE - Movie Database",
+    "description": "A responsive, accessible React and Tailwind CSS web application that lets users browse popular movies fetched from the TMDB API. It features dynamic multi-page navigation via React Router, a splash screen animation using Motion, custom branding, and SEO optimizations.",
+    "image": "/projects/cinebase.webp",
+    "demoUrl": "https://movies-project-react-router.netlify.app/",
+    "codeUrl": "https://github.com/jszor/js-project-movies",
+    "tags": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React.js",
+      "React Router",
+      "API",
+      "TailwindCSS",
+      "Motion"
+    ]
+  },
+  {
+    "id": 4,
     "title": "Portfolio",
     "description": "My personal coding portfolio, built as a React application with Vite and styled-components, showcasing my skills, JSON-formatted projects and articles, and contact information.",
     "image": "/projects/talo-portfolio.webp",
     "demoUrl": "https://taloportfolio.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-portfolio",
-    "tags": ["HTML5","CSS3","JavaScript", "JSON", "styled components", "Vite"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "JSON", "styled components", "Vite"]
   },
-    {
-    "id": 4,
+  {
+    "id": 5,
     "title": "Recipe Library",
     "description": "A dynamic web app that fetches real recipe data from Spoonacular API and displays recipe cards when the page loads. It lets users filter by dietary preferences, cuisine, cooking time, and ingredient count, and sort recipes by various criteria. Users can also click a 'Surprise me!' button to display a random recipe.",
     "image": "/projects/recipe-library.webp",
     "demoUrl": "https://talorecipes.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-recipe-library",
-    "tags": ["HTML5","CSS3","JavaScript","API"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "API"]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Weather App",
     "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast. This was developed collaboratively as a group effort.",
     "image": "/projects/weather-app.webp",
     "demoUrl": "https://wind1weatherapp.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-weather-app",
-    "tags": ["HTML5","CSS3","JavaScript","TypeScript","API"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "TypeScript", "API"]
   },
-    {
-    "id": 6,
+  {
+    "id": 7,
     "title": "Web Accessibility Quiz",
     "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity. Conceived as a team project.",
     "image": "/projects/web-accessibility.webp",
     "demoUrl": "https://teamwind1.netlify.app/",
     "codeUrl": "https://github.com/Bianka2112/js-project-accessibility",
-    "tags": ["HTML5","CSS3","JavaScript","WCAG 2.1"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "WCAG 2.1"]
   },
-    {
-    "id": 7,
+  {
+    "id": 8,
     "title": "Kaffe Colombia Express",
     "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
     "image": "/projects/kaffe-colombia.webp",
     "demoUrl": "https://kaffekolombia.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-business-site",
-    "tags": ["HTML5","CSS3","JavaScript"]
+    "tags": ["HTML5", "CSS3", "JavaScript"]
   }
 ]

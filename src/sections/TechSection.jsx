@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Section } from '../components/ui/SectionContainer';
-import { Headline } from '../components/ui/Headline';
-import { FadeInSection } from '../components/ui/FadeInSection';
-import { media }   from '../styles/media';
+import React from "react";
+import styled from "styled-components";
+import { Section } from "../components/ui/SectionContainer";
+import { Headline } from "../components/ui/Headline";
+import { FadeInSection } from "../components/ui/FadeInSection";
+import { media } from "../styles/media";
 
 const TechWrapper = styled(Section)`
   width: 100%;
-  background: ${({ theme }) => theme.colors.primary};   /* pure black */
-  color: ${({ theme }) => theme.colors.background};     /* white text */
+  background: ${({ theme }) => theme.colors.primary}; /* pure black */
+  color: ${({ theme }) => theme.colors.background}; /* white text */
 `;
 
 const Content = styled.div`
@@ -32,17 +32,39 @@ const List = styled.p`
 
 export default function TechSection() {
   const skills = [
-    'HTML','CSS','Flexbox','JavaScript','ES6','JSX',
-    'React','React Hooks','Node.js','Mongo DB',
-    'Accessibility','APIs','Mob-programming',
-    'Pair-programming','GitHub'
+    "TypeScript",
+    "React",
+    "JavaScript",
+    "TailwindCSS",
+    "Web Audio API",
+    "Node.js",
+    "Express.js",
+    "Next.js",
+    "Mongo DB",
+    "Storybook",
+    "Figma",
+    "Three.js",
+    "HTML",
+    "CSS",
+    "ES6",
+    "Accessibility",
+    "APIs",
+    "Styled-components",
+    "Motion",
+    "Mob-programming",
+    "Pair-programming",
+    "GitHub",
   ];
 
   return (
     <TechWrapper id="tech">
       <Content>
-        <FadeInSection><CenteredHeadline>Tech</CenteredHeadline></FadeInSection>
-        <FadeInSection><List>{skills.join(', ')}</List></FadeInSection>
+        <FadeInSection>
+          <CenteredHeadline>Tech</CenteredHeadline>
+        </FadeInSection>
+        <FadeInSection>
+          <List>{skills.join(", ")}</List>
+        </FadeInSection>
       </Content>
     </TechWrapper>
   );
