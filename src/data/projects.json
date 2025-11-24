@@ -10,7 +10,7 @@
       "TypeScript",
       "React.js",
       "Storybook",
-      "Web Audio",
+      "Web Audio API",
       "Developer Tool",
       "Internal Tool"
     ]
@@ -23,7 +23,7 @@
     "demoUrl": "https://tatuner.netlify.app/",
     "codeUrl": "https://github.com/govargas/tuner-web-app",
     "tags": [
-      "React",
+      "React.js",
       "TypeScript",
       "Vite",
       "Tailwind CSS",

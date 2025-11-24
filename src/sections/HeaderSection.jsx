@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { media } from '../styles/media'
+import React from "react";
+import styled from "styled-components";
+import { media } from "../styles/media";
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -15,12 +15,12 @@ const HeaderWrapper = styled.header`
   padding: ${({ theme }) => theme.space.md} 0;
 
   ${media.lg} {
-    background: url('/talo_header.webp') no-repeat 100% 10% / 113% auto;
+    background: url("/talo_header.webp") no-repeat 100% 10% / 113% auto;
     display: block;
     padding: 0;
     height: 100vh;
   }
-`
+`;
 
 const Photo = styled.img`
   width: 90%;
@@ -33,7 +33,7 @@ const Photo = styled.img`
   ${media.lg} {
     display: none;
   }
-`
+`;
 
 const Overlay = styled.div`
   /* ── MOBILE & TABLET: stacked block in flow ── */
@@ -89,7 +89,7 @@ const Overlay = styled.div`
       margin-top: ${({ theme }) => theme.space.md};
     }
   }
-`
+`;
 
 export default function HeaderSection() {
   return (
@@ -104,14 +104,15 @@ export default function HeaderSection() {
 
       <Overlay as="div">
         <p className="body">
-          I’m a full stack developer who brings together code, creativity, and
-          communication. With a background in public libraries, journalism, and
-          music, I’m used to turning complex ideas into clear, engaging
-          experiences for diverse audiences. Whether collaborating in a team or
-          building solo, I code with people in mind — always aiming for
-          thoughtful, accessible, and user-friendly solutions.
+          I’m a software engineer and creative technologist who builds
+          interactive web experiences and developer tools, often where media,
+          audio, and design meet. Recently I completed a 6-week internship at
+          Epidemic Sound, developing an internal showcase for their headless web
+          audio engine. I bring a background in music, journalism, and public
+          libraries, and I like turning complex ideas into clear, accessible
+          experiences.
         </p>
       </Overlay>
     </HeaderWrapper>
-  )
+  );
 }
