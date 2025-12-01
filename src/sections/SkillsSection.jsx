@@ -102,7 +102,6 @@ export default function SkillsSection() {
             <Item>Netlify</Item>
             <Item>Vercel</Item>
             <Item>MongoDB Atlas</Item>
-            <Item>Supabase</Item>
             <Item>Docker</Item>
           </Column>
         </FadeInSection>
