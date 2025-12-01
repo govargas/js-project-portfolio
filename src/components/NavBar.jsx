@@ -15,6 +15,11 @@ const Nav = styled.nav`
 
   ${media.lg} {
     padding: ${({ theme }) => theme.space.lg} ${({ theme }) => theme.space.xxl};
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 `;
 
