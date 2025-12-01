@@ -104,13 +104,12 @@ export default function HeaderSection() {
 
       <Overlay as="div">
         <p className="body">
-          I’m a software engineer and creative technologist who builds
-          interactive web experiences and developer tools, often where media,
-          audio, and design meet. Recently I completed a 6-week internship at
-          Epidemic Sound, developing an internal showcase for their headless web
-          audio engine. I bring a background in music, journalism, and public
-          libraries, and I like turning complex ideas into clear, accessible
-          experiences.
+          I build interactive web experiences and developer tools with a focus
+          on clarity and accessibility. During my recent 6-week internship at
+          Epidemic Sound, I created an internal showcase for their headless web
+          audio engine. With a background in journalism, music production and
+          public libraries, I’m drawn to projects where technical depth meets
+          thoughtful, human-centered design.
         </p>
       </Overlay>
     </HeaderWrapper>

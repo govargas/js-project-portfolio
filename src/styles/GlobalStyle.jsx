@@ -25,6 +25,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   /* 2. Base typography & colors */
+  html {
+    scroll-behavior: smooth;
+  }
+
   html, body {
     font-family: ${({ theme }) => theme.fonts.body};
     background: ${({ theme }) => theme.colors.background};

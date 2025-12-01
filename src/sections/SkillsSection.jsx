@@ -74,39 +74,55 @@ export default function SkillsSection() {
       <Grid>
         <FadeInSection>
           <Column>
-            <ColumnTag>Code</ColumnTag>
+            <ColumnTag>Frontend</ColumnTag>
             <Item>HTML5</Item>
             <Item>CSS3</Item>
-            <Item>TypeScript</Item>
-            <Item>JavaScript</Item>
+            <Item>TypeScript / JavaScript</Item>
             <Item>React.js</Item>
-            <Item>Web Audio API</Item>
             <Item>Next.js</Item>
-            <Item>Node.js</Item>
-            <Item>Express.js</Item>
-            <Item>MongoDB</Item>
-            <Item>Storybook</Item>
-            <Item>Styled Components</Item>
+            <Item>Vite</Item>
             <Item>Tailwind CSS</Item>
-            <Item>GitHub</Item>
+            <Item>Styled Components</Item>
+            <Item>Storybook</Item>
           </Column>
         </FadeInSection>
 
         <FadeInSection>
           <Column>
-            <ColumnTag>Toolbox</ColumnTag>
-            <Item>Atom</Item>
-            <Item>Postman</Item>
-            <Item>Adobe After Effects</Item>
-            <Item>Adobe Photoshop</Item>
-            <Item>Adobe Premiere</Item>
-            <Item>Adobe Illustrator</Item>
+            <ColumnTag>Backend</ColumnTag>
+            <Item>Node.js</Item>
+            <Item>Express.js</Item>
+            <Item>MongoDB</Item>
+          </Column>
+        </FadeInSection>
+
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Deployment</ColumnTag>
+            <Item>Netlify</Item>
+            <Item>Vercel</Item>
+            <Item>MongoDB Atlas</Item>
+            <Item>Supabase</Item>
+            <Item>Docker</Item>
+          </Column>
+        </FadeInSection>
+
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Design & Creative Tools</ColumnTag>
+            <Item>Adobe Suite</Item>
             <Item>Figma</Item>
             <Item>DaVinci Resolve</Item>
-            <Item>Keynote</Item>
-            <Item>Slack</Item>
             <Item>Canva</Item>
-            <Item>Figma</Item>
+            <Item>Keynote</Item>
+          </Column>
+        </FadeInSection>
+
+        <FadeInSection>
+          <Column>
+            <ColumnTag>Audio & Creative Coding</ColumnTag>
+            <Item>Web Audio API</Item>
+            <Item>Strudel.js</Item>
             <Item>Ableton Live</Item>
             <Item>Logic Pro X</Item>
             <Item>Bitwig</Item>
@@ -115,8 +131,20 @@ export default function SkillsSection() {
 
         <FadeInSection>
           <Column>
+            <ColumnTag>Workflow Tools</ColumnTag>
+            <Item>Git & GitHub</Item>
+            <Item>Agile Methodology</Item>
+            <Item>Kanban</Item>
+            <Item>Jira</Item>
+            <Item>Confluence</Item>
+            <Item>Slack</Item>
+          </Column>
+        </FadeInSection>
+
+        <FadeInSection>
+          <Column>
             <ColumnTag>Upcoming</ColumnTag>
-            <Item>Supabase</Item>
+            <Item>Python</Item>
             <Item>JUCE</Item>
             <Item>C++</Item>
           </Column>
@@ -124,27 +152,10 @@ export default function SkillsSection() {
 
         <FadeInSection>
           <Column>
-            <ColumnTag>More</ColumnTag>
-            <Item>Agile methodology</Item>
-            <Item>Jira</Item>
-            <Item>Confluence</Item>
-            <Item>Slack</Item>
-            <Item>Canva</Item>
-            <Item>Kanban</Item>
-            <Item>Git</Item>
-            <Item>Branding</Item>
-            <Item>Strategy</Item>
-            <Item>Process Design</Item>
-            <Item>Concept Development</Item>
-          </Column>
-        </FadeInSection>
-
-        <FadeInSection>
-          <Column>
             <ColumnTag>Languages</ColumnTag>
-            <Item>Spanish</Item>
             <Item>Swedish</Item>
             <Item>English</Item>
+            <Item>Spanish</Item>
             <Item>German</Item>
           </Column>
         </FadeInSection>
