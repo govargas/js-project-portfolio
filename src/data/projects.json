@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Power Play Showcase - Internal Developer Tool (Epidemic Sound)",
-    "description": "An internal developer tool built during my internship at Epidemic Sound. It was built with Storybook, React, and TypeScript to showcase Epidemic Sound’s headless web audio engine. It provides interactive “recipes” for multi-track playback, stems mixing, signal-processing utilities like gain metering, and makes it easier for developers to prototype, test, and demo new audio features without a full client app.",
+    "description": "An internal developer tool built during my internship at Epidemic Sound. It was built with React, TypeScript and Storybookto showcase Epidemic Sound’s headless web audio engine. It provides interactive “recipes” for multi-track playback, stems mixing, signal-processing utilities like gain metering, and makes it easier for developers to prototype, test, and demo new audio features without a full client app.",
     "image": "/projects/epidemic.webp",
     "demoUrl": "",
     "codeUrl": "",
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "title": "Tuner Web App",
-    "description": "A precise and responsive instrument tuner application built with React and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a simple, dark-themed interface.",
+    "description": "A precise and responsive instrument tuner application built with React, TypeScript and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a simple, dark-themed interface.",
     "image": "/projects/tuner-web-app.webp",
     "demoUrl": "https://tatuner.netlify.app/",
     "codeUrl": "https://github.com/govargas/tuner-web-app",
@@ -38,7 +38,7 @@
     "image": "/projects/happy-thoughts.png",
     "demoUrl": "https://happythoughtstalo.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-happy-thoughts",
-    "tags": ["HTML5", "CSS3", "JavaScript", "React.js", "API", "TailwindCSS"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "React.js", "API", "Tailwind CSS"]
   },
   {
     "id": 4,
@@ -54,7 +54,7 @@
       "React.js",
       "React Router",
       "API",
-      "TailwindCSS",
+      "Tailwind CSS",
       "Motion"
     ]
   },
@@ -65,7 +65,7 @@
     "image": "/projects/talo-portfolio.webp",
     "demoUrl": "https://taloportfolio.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-portfolio",
-    "tags": ["HTML5", "CSS3", "JavaScript", "JSON", "styled components", "Vite"]
+    "tags": ["HTML5", "CSS3", "JavaScript", "JSON", "Styled Components", "Vite"]
   },
   {
     "id": 6,

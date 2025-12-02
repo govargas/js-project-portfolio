@@ -104,12 +104,13 @@ export default function HeaderSection() {
 
       <Overlay as="div">
         <p className="body">
-          I build interactive web experiences and developer tools with a focus
-          on clarity and accessibility. During my recent 6-week internship at
-          Epidemic Sound, I created an internal showcase for their headless web
-          audio engine. With a background in journalism, music production and
-          public libraries, I’m drawn to projects where technical depth meets
-          thoughtful, human-centered design.
+          I build modern, interactive web experiences where frontend engineering
+          meets thoughtful design. Recently, during my 6-week internship at
+          Epidemic Sound, I developed an internal showcase for their headless
+          web audio engine, exploring how audio, UI and interaction can meet on
+          the web. With a background in journalism, music production and public
+          libraries, I’m drawn to projects that combine technical depth with
+          clear, human-centered interfaces.
         </p>
       </Overlay>
     </HeaderWrapper>
