@@ -1,8 +1,28 @@
 [
   {
     "id": 1,
+    "title": "BADA – Find Safe Beaches in Sweden",
+    "description": "A full-stack beach safety app that replaces Sweden's outdated bathing water websites with a stunning, modern experience. Features an interactive map of 400+ EU-classified beaches with real-time water quality data, 3D WebGL animated backgrounds (flowing water in dark mode, sand texture in light mode), glassmorphism UI, user authentication with drag-and-drop favorites, geolocation, multi-language support, and comprehensive accessibility. Built as the final project for my full-stack web dev studies at Technigo.",
+    "image": "/projects/bada.webp",
+    "video": "/projects/bada-demo.mp4",
+    "demoUrl": "https://badaweb.netlify.app/",
+    "codeUrl": "https://github.com/govargas/bada",
+    "tags": [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Three.js",
+      "MapLibre",
+      "Tailwind CSS",
+      "Full-Stack"
+    ]
+  },
+  {
+    "id": 2,
     "title": "Power Play Showcase - Internal Developer Tool (Epidemic Sound)",
-    "description": "An internal developer tool built during my internship at Epidemic Sound. It was built with React, TypeScript and Storybookto showcase Epidemic Sound’s headless web audio engine. It provides interactive “recipes” for multi-track playback, stems mixing, signal-processing utilities like gain metering, and makes it easier for developers to prototype, test, and demo new audio features without a full client app.",
+    "description": "An internal developer tool built during my internship at Epidemic Sound. It was built with React, TypeScript and Storybook to showcase Epidemic Sound's headless web audio engine. It provides interactive 'recipes' for multi-track playback, stems mixing, signal-processing utilities like gain metering, and makes it easier for developers to prototype, test, and demo new audio features without a full client app.",
     "image": "/projects/epidemic.webp",
     "demoUrl": "",
     "codeUrl": "",
@@ -16,7 +36,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Tuner Web App",
     "description": "A precise and responsive instrument tuner application built with React, TypeScript and the Web Audio API. It features real-time pitch detection, a visual cents meter for accurate tuning, and an RMS input level monitor. Users can adjust the A4 reference frequency and select their preferred audio input device, all within a simple, dark-themed interface.",
     "image": "/projects/tuner-web-app.webp",
@@ -32,16 +52,16 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Happy Thoughts",
-    "description": "A simple, positive-messaging web app built with React, Vite, and Tailwind CSS. Users can post “happy thoughts,” view the latest messages from a public API, and send likes.",
+    "description": "A simple, positive-messaging web app built with React, Vite, and Tailwind CSS. Users can post 'happy thoughts,' view the latest messages from a public API, and send likes.",
     "image": "/projects/happy-thoughts.png",
     "demoUrl": "https://happythoughtstalo.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-happy-thoughts",
     "tags": ["HTML5", "CSS3", "JavaScript", "React.js", "API", "Tailwind CSS"]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "CINEBASE - Movie Database",
     "description": "A responsive, accessible React and Tailwind CSS web application that lets users browse popular movies fetched from the TMDB API. It features dynamic multi-page navigation via React Router, a splash screen animation using Motion, custom branding, and SEO optimizations.",
     "image": "/projects/cinebase.webp",
@@ -59,7 +79,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "Portfolio",
     "description": "My personal coding portfolio, built as a React application with Vite and styled-components, showcasing my skills, JSON-formatted projects and articles, and contact information.",
     "image": "/projects/talo-portfolio.webp",
@@ -68,7 +88,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "JSON", "Styled Components", "Vite"]
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Recipe Library",
     "description": "A dynamic web app that fetches real recipe data from Spoonacular API and displays recipe cards when the page loads. It lets users filter by dietary preferences, cuisine, cooking time, and ingredient count, and sort recipes by various criteria. Users can also click a 'Surprise me!' button to display a random recipe.",
     "image": "/projects/recipe-library.webp",
@@ -77,7 +97,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "API"]
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Weather App",
     "description": "A small app that shows the current weather in any city, using real-time data and dynamic styling based on the forecast. This was developed collaboratively as a group effort.",
     "image": "/projects/weather-app.webp",
@@ -86,7 +106,7 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "TypeScript", "API"]
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Web Accessibility Quiz",
     "description": "A quiz to help developers learn core accessibility principles in a fun and interactive way. Focus on keyboard navigation, semantic HTML, and visual clarity. Conceived as a team project.",
     "image": "/projects/web-accessibility.webp",
@@ -95,9 +115,9 @@
     "tags": ["HTML5", "CSS3", "JavaScript", "WCAG 2.1"]
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Kaffe Colombia Express",
-    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store’s vibrant identity while staying simple and accessible for the local community.",
+    "description": "Website for a local Latin American restaurant and grocery store in Hökarängen, Stockholm. Designed to reflect the store's vibrant identity while staying simple and accessible for the local community.",
     "image": "/projects/kaffe-colombia.webp",
     "demoUrl": "https://kaffekolombia.netlify.app/",
     "codeUrl": "https://github.com/govargas/js-project-business-site",

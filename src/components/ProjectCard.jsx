@@ -2,6 +2,7 @@ import React from "react";
 
 export default function ProjectCard({
   image,
+  video,
   tags,
   title,
   description,
@@ -10,7 +11,19 @@ export default function ProjectCard({
 }) {
   return (
     <article>
-      <img src={image} alt={`${title} screenshot`} />
+      {video ? (
+        <video
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={image}
+          aria-label={`${title} demo video`}
+        />
+      ) : (
+        <img src={image} alt={`${title} screenshot`} />
+      )}
       <div>
         <div className="tags">
           {tags.map((t) => (

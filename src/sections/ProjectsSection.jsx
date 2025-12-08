@@ -42,6 +42,18 @@ const ProjectPhoto = styled(BasePhoto)`
   }
 `;
 
+const ProjectVideo = styled.video`
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+
+  ${media.lg} {
+    width: 45%;
+    flex-shrink: 0;
+  }
+`;
+
 const Info = styled.div`
   width: 100%;
   flex: 1;
@@ -111,7 +123,19 @@ export default function ProjectsSection() {
 
           return (
             <Card key={p.id} reverse={i % 2 === 1}>
-              <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
+              {p.video ? (
+                <ProjectVideo
+                  src={p.video}
+                  poster={p.image}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  aria-label={`${p.title} demo video`}
+                />
+              ) : (
+                <ProjectPhoto src={p.image} alt={`${p.title} screenshot`} />
+              )}
 
               <Info>
                 {rows.map((row, idx) => (
