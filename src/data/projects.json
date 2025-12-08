@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "BADA – Find Safe Beaches in Sweden",
-    "description": "A full-stack beach safety app that replaces Sweden's outdated bathing water websites with a stunning, modern experience. Features an interactive map of 400+ EU-classified beaches with real-time water quality data, 3D WebGL animated backgrounds (flowing water in dark mode, sand texture in light mode), glassmorphism UI, user authentication with drag-and-drop favorites, geolocation, multi-language support, and comprehensive accessibility. Built as the final project for my full-stack web dev studies at Technigo.",
+    "description": "A full-stack beach safety app that replaces Sweden's outdated bathing water websites with a clean, modern experience. Features an interactive map of 400+ EU-classified beaches with real-time water quality data, 3D WebGL animated backgrounds (flowing water in dark mode, sand texture in light mode), glassmorphism UI, user authentication with drag-and-drop favorites, geolocation, multi-language support, and comprehensive accessibility. Built as the final project for my full-stack web dev studies at Technigo.",
     "image": "/projects/bada.webp",
     "video": "/projects/bada-demo.mp4",
     "demoUrl": "https://badaweb.netlify.app/",
